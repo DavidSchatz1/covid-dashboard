@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { NavbarComponent } from './layout/navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'covid-dashboard';
-}
+
+@ViewChild('sectionsContainer', { read: ElementRef }) sectionsContainer!: ElementRef;
+
+  sectionElements: HTMLElement[] = [];
+
+  ngAfterViewInit() {
+    this.sectionElements = Array.from(this.sectionsContainer.nativeElement.children);
+  }}

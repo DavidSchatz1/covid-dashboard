@@ -1,0 +1,13 @@
+<div #navbar class="navbar">
+  <ul>
+    <li><a class="first-item" href="#overview" [class.active]="activeSection === 'overview'">{{ AnchorFields.Overview| LanguagesPipe }}</a></li>
+    <li><a href="#key-data" [class.active]="activeSection === 'key-data'">{{ AnchorFields.KeyData| LanguagesPipe }}</a></li>
+    <li><a href="#childCases" [class.active]="activeSection === 'childCases'">{{ AnchorFields.ChildCasesAndHospitalizations | LanguagesPipe }}</a></li>
+    <li><a href="#vaccination-effectiveness" [class.active]="activeSection === 'vaccination-effectiveness'">{{ AnchorFields.VaccinationEffectiveness | LanguagesPipe }}</a></li>
+    <li><a href="#deaths" [class.active]="activeSection === 'deaths'">{{ AnchorFields.Deaths | LanguagesPipe }}</a></li>
+    <li><a href="#testing" [class.active]="activeSection === 'testing'">{{ AnchorFields.Testing | LanguagesPipe }}</a></li>
+    <li><a href="#additional-data" [class.active]="activeSection === 'additional-data'">{{ AnchorFields.AdditionalData | LanguagesPipe }}</a></li>
+    <li><a href="#reinfectionandrecovery" [class.active]="activeSection === 'reinfectionandrecovery'">{{ AnchorFields.ReinfectionAndRecovery | LanguagesPipe }}</a></li>
+    <li><a href="#vaccination" [class.active]="activeSection === 'vaccination'">{{ AnchorFields.Vaccination | LanguagesPipe }}</a></li>
+  </ul>
+</div>

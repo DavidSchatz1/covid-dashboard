@@ -1,0 +1,11 @@
+<div class="overviewContainer">
+  <div class="subtitle"> {{OverviewField.Title | LanguagesPipe}}</div>
+  <div class="overview-cards">
+    <app-overview-card [field]="OverviewField.ConfirmedCases"></app-overview-card>
+    <app-overview-card [field]="OverviewField.ActiveCases"></app-overview-card>
+    <app-overview-card [field]="OverviewField.Vaccinated"></app-overview-card>
+    <app-overview-card [field]="OverviewField.Deaths"></app-overview-card>
+    <app-overview-card [field]="OverviewField.PercentPositives"></app-overview-card>
+  </div>
+  <app-seven-day-summary></app-seven-day-summary>
+</div>

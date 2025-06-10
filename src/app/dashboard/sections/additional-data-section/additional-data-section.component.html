@@ -1,0 +1,17 @@
+<div class="additional-data">
+  <div class="subtitle">
+    {{AdditionalDataField.Title| LanguagesPipe}}
+  </div>
+  <app-subject-links></app-subject-links>
+  <div class="chart-card">
+    <div class="title">
+      <div class="title1section">
+        <h3 class="subtitle">{{hospitalTableFields.HospitalBedAccum| LanguagesPipe}}</h3>
+        <app-info-icon [infoText]="hospitalTableFields.HospitalTableInfo| LanguagesPipe"></app-info-icon>
+      </div>
+      <app-more-menu></app-more-menu>
+    </div>
+    <app-hospital-occupancy-table></app-hospital-occupancy-table>
+  </div>
+</div>
+

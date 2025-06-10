@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'breakpoints';
+.data-page-header{
+  display: flex;
+  flex: 1 1;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--grey-background);
+  color: var(--text-color);
+  margin: 0 30px;
+
+  .date{
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+}

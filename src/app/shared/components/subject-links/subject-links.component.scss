@@ -1,0 +1,94 @@
+@import 'variables';
+@import 'breakpoints';
+
+app-subject-links {
+  display: contents;
+}
+.subject-links-title {
+  
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-base;
+  color: var(--text-color);
+  position: relative;
+  font-weight: 400;
+  font-size: $font-size-base;
+  margin-bottom: 20px;
+
+  &.open {
+    font-weight: 700; 
+  }
+  span{
+    display: inline;
+  }
+  .separator {
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    color: gray;
+  }
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 100%;
+  inset-inline-start: 10%;
+  width: 400px;
+  height: 200px;
+  z-index: 10;
+  display: flex; 
+  flex-direction: column; 
+  box-shadow: $box-shadow-lg;
+  border-radius: 6px;
+  background-color: var(--background-color);
+
+  @include breakpoint(sm) {
+    width: 200px;
+    height: 250px;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1;
+    border-bottom: 1px solid $border-color;
+
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      padding: 7px;
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+    }
+
+    .text-area{
+      display: flex;
+      flex-direction: column;
+      padding-inline-start: 10px;
+      
+      
+
+      .line {
+        padding: 0;
+        margin: 0;
+        font-size: $font-size-xs;
+        font-weight: 400;
+        color: var(--text-color);
+
+        
+      }
+      a{
+        padding: 0;
+        margin: 0;
+        font-size: $font-size-xs;
+        font-weight: 400;
+        color: blue;
+        text-decoration: underline;
+      }
+    } 
+  }
+}

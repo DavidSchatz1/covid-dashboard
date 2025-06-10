@@ -1,0 +1,62 @@
+
+  <div (click)="toggleMenu()" (mouseleave)="isOpen = false" class="subject-links-title" [ngClass]="isOpen ? 'open' : ''">
+    <span class="separator">
+       |
+    </span>
+    <span>
+      {{subjectLinksFields.subjectLinksTitle| LanguagesPipe}}
+    </span>
+    <span [innerText]="isOpen ? '▴' : '▾'"></span>
+
+    <div *ngIf="isOpen" class="dropdown-container">
+
+      <div class="item">
+        <div class="img">
+          <img src="assets/images/excel-icon.png" alt="excel-icon">
+        </div>
+        <div class="text-area">
+          <div class="line" style="font-weight: 700;">
+            {{subjectLinksFields.Covid19ByArea| LanguagesPipe}}
+          </div>
+          <div class="line">
+            {{subjectLinksFields.israelCenter| LanguagesPipe}}
+          </div>
+          <a>
+            {{subjectLinksFields.dataGovLink| LanguagesPipe}}
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="img">
+          <img src="assets/images/internet-icon.png" alt="excel-icon">
+        </div>
+        <div class="text-area">
+          <div class="line" style="font-weight: 700;">
+            {{subjectLinksFields.globalWHO| LanguagesPipe}}
+          </div>
+          <a>
+            {{subjectLinksFields.globalWHOlink| LanguagesPipe}}
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="img">
+          <img src="assets/images/internet-icon.png" alt="excel-icon">
+        </div>
+        <div class="text-area">
+          <div class="line" style="font-weight: 700;">
+            {{subjectLinksFields.dataOnIsolated| LanguagesPipe}}
+          </div>
+          <div class="line">
+            {{subjectLinksFields.dataOnIsolatedactive| LanguagesPipe}}
+          </div>
+          <a>
+            {{subjectLinksFields.dataGovLink| LanguagesPipe}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

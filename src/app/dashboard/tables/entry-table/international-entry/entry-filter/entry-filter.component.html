@@ -1,0 +1,62 @@
+<div class="dropdown-wrapper">
+  <div class="dropdown-toggle" (click)="toggleDropdown()">
+    {{ timeRangeTranslationKey | LanguagesPipe }},
+
+    {{ selectedCountries.length }} {{ InternationalEntryFields.countrysChosen | LanguagesPipe }}
+  </div>
+
+  <div class="dropdown-panel" *ngIf="isDropdownOpen">
+    
+    <!-- שלב 1: בחירת טווח זמן -->
+    <div *ngIf="isTimeRangeStep" class="time-range-selector">
+      <label>
+        <input type="radio" name="timeRange" value="last month" [(ngModel)]="timeRangeChosen" />
+        {{ InternationalEntryFields.last30days | LanguagesPipe }}
+      </label>
+      <label>
+        <input type="radio" name="timeRange" value="last 3 months" [(ngModel)]="timeRangeChosen" />
+        {{ InternationalEntryFields.Last3Months | LanguagesPipe }}
+      </label>
+      <label>
+        <input type="radio" name="timeRange" value="last 6 months" [(ngModel)]="timeRangeChosen" />
+        {{ InternationalEntryFields.Last6Months| LanguagesPipe }}
+      </label>
+      <label>
+        <input type="radio" name="timeRange" value="last 1 year" [(ngModel)]="timeRangeChosen" />
+        {{ InternationalEntryFields.Last1Year| LanguagesPipe }}
+      </label>
+
+      <label>
+        <input type="radio" name="timeRange" value="entire period" [(ngModel)]="timeRangeChosen" />
+        {{ InternationalEntryFields.EntirePeriod| LanguagesPipe }}
+      </label>
+
+      <div class="dropdown-actions">
+        <button (click)="confirmTimeRange()">{{ InternationalEntryFields.Save | LanguagesPipe }}</button>
+        <button (click)="cancelFilter()">{{ InternationalEntryFields.Cancel | LanguagesPipe }}</button>
+      </div>
+    </div>
+
+    <!-- שלב 2: בחירת מדינות -->
+    <div *ngIf="!isTimeRangeStep" class="country-selector">
+      <input
+        type="text"
+        [placeholder]="'hospitalTableFields.SearchForHospital' | LanguagesPipe"
+        [(ngModel)]="searchTerm"
+        class="search-box"
+      />
+
+      <div class="checkbox-list">
+        <label *ngFor="let country of filteredCountries">
+          <input type="checkbox" [(ngModel)]="country.selected" />
+          {{ country.name | LanguagesPipe }}
+        </label>
+      </div>
+
+      <div class="dropdown-actions">
+        <button (click)="applyFilter()">{{ InternationalEntryFields.Save | LanguagesPipe }}</button>
+        <button (click)="cancelFilter()">{{ InternationalEntryFields.Cancel | LanguagesPipe }}</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "open sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.open-sans-font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.main-title {
+  font-size: $font-size-xl;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  font-weight: 700;
+}
+.chart-card{
+  padding: 10px;
+  border-radius: 10px;
+  // margin: 10px;
+  background-color: var(--card-background);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.selector-actions {
+  margin-top: 8px;
+
+  button {
+    background-color: var(--more-hover-color);
+    width: 50%;
+    cursor: pointer;
+    height: 32px;
+    border: none;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+  }
+}

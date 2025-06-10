@@ -1,0 +1,82 @@
+@import 'variables';
+.range-selector {
+  position: relative;
+  width: 110px;
+  // background: var(--background-color);
+
+  .selector-header {
+    padding: 5.6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--grey-background);
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: $font-size-sm;
+
+    .arrow {
+      transition: transform 0.2s;
+    }
+
+    .arrow.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  .options-container {
+    position: absolute; 
+    top: 100%;     
+    inset-inline-start: 0;
+    width: 200px;
+    z-index: 10;  
+    border: 1px solid #ddd;
+    background: var(--background-color);
+
+    .options-container-header{
+      font-weight: 700;
+      padding: 6px 10px;
+    }
+    .range-option {
+      padding: 6px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .option-text{
+        margin-inline-start: 10px;
+        font-size: $font-size-sm;
+      }
+
+      .check-circle {
+        width: 12px; /* הגדלנו קצת את הגודל של המסגרת החיצונית */
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid #333; /* צבע מסגרת אפור */
+        margin-right: 10px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+
+        &.checked {
+          border-color: #0076f5; 
+          background-color: transparent;
+          
+          &::before {
+            content: ''; 
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #0076f5; 
+          }
+        }
+      }
+    }
+  }
+}

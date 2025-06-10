@@ -1,0 +1,153 @@
+// export interface InternationalEntryData {
+//   country: string;
+//   incoming: number;
+//   verifiedCitizens: number;
+//   verifiedForeigners: number;
+//   percentageVerified: number;
+//   riskColor: string;
+// }
+
+// export const internationalEntries: InternationalEntryData[] = [
+//   { country: 'unitedStates', incoming: 12000, verifiedCitizens: 200, verifiedForeigners: 100, percentageVerified: 2.5, riskColor: 'yellow' },
+//   { country: 'unitedKingdom', incoming: 8000, verifiedCitizens: 80, verifiedForeigners: 40, percentageVerified: 1.5, riskColor: 'yellow' },
+//   { country: 'france', incoming: 7500, verifiedCitizens: 60, verifiedForeigners: 30, percentageVerified: 1.2, riskColor: 'yellow' },
+//   { country: 'germany', incoming: 10000, verifiedCitizens: 90, verifiedForeigners: 10, percentageVerified: 1.0, riskColor: 'yellow' },
+//   { country: 'italy', incoming: 6500, verifiedCitizens: 50, verifiedForeigners: 20, percentageVerified: 1.08, riskColor: 'yellow' },
+//   { country: 'spain', incoming: 7200, verifiedCitizens: 100, verifiedForeigners: 60, percentageVerified: 2.22, riskColor: 'yellow' },
+//   { country: 'canada', incoming: 5000, verifiedCitizens: 25, verifiedForeigners: 10, percentageVerified: 0.7, riskColor: 'green' },
+//   { country: 'russia', incoming: 6000, verifiedCitizens: 180, verifiedForeigners: 60, percentageVerified: 4.0, riskColor: 'red' },
+//   { country: 'china', incoming: 11000, verifiedCitizens: 70, verifiedForeigners: 10, percentageVerified: 0.73, riskColor: 'green' },
+//   { country: 'japan', incoming: 4800, verifiedCitizens: 30, verifiedForeigners: 20, percentageVerified: 1.04, riskColor: 'yellow' },
+//   { country: 'southKorea', incoming: 4500, verifiedCitizens: 25, verifiedForeigners: 10, percentageVerified: 0.78, riskColor: 'green' },
+//   { country: 'australia', incoming: 5200, verifiedCitizens: 20, verifiedForeigners: 5, percentageVerified: 0.48, riskColor: 'green' },
+//   { country: 'brazil', incoming: 9000, verifiedCitizens: 200, verifiedForeigners: 150, percentageVerified: 3.89, riskColor: 'red' },
+//   { country: 'india', incoming: 11000, verifiedCitizens: 250, verifiedForeigners: 120, percentageVerified: 3.36, riskColor: 'red' },
+//   { country: 'ukraine', incoming: 4300, verifiedCitizens: 60, verifiedForeigners: 30, percentageVerified: 2.09, riskColor: 'yellow' },
+//   { country: 'turkey', incoming: 5600, verifiedCitizens: 80, verifiedForeigners: 40, percentageVerified: 2.14, riskColor: 'yellow' },
+//   { country: 'egypt', incoming: 3700, verifiedCitizens: 50, verifiedForeigners: 20, percentageVerified: 1.89, riskColor: 'yellow' },
+//   { country: 'argentina', incoming: 3100, verifiedCitizens: 25, verifiedForeigners: 15, percentageVerified: 1.29, riskColor: 'yellow' },
+//   { country: 'southAfrica', incoming: 2900, verifiedCitizens: 35, verifiedForeigners: 25, percentageVerified: 2.07, riskColor: 'yellow' },
+// ];
+
+// InternationalEntry.data.ts
+import { timeRange } from "src/app/dashboard/tables/entry-table/international-entry/entry-filter/entry-filter.component";
+
+export interface InternationalEntryData {
+  country: string;
+  incoming: number;
+  verifiedCitizens: number;
+  verifiedForeigners: number;
+  percentageVerified: number;
+  riskColor: string;
+}
+export const internationalEntriesByTimeRange: {
+  [key in timeRange]: InternationalEntryData[];
+} = {
+  'last month': [
+    { country: 'unitedStates', incoming: 3000, verifiedCitizens: 40, verifiedForeigners: 20, percentageVerified: 2.0, riskColor: 'yellow' },
+    { country: 'unitedKingdom', incoming: 2000, verifiedCitizens: 25, verifiedForeigners: 15, percentageVerified: 2.0, riskColor: 'yellow' },
+    { country: 'france', incoming: 1800, verifiedCitizens: 20, verifiedForeigners: 10, percentageVerified: 1.67, riskColor: 'yellow' },
+    { country: 'germany', incoming: 2400, verifiedCitizens: 22, verifiedForeigners: 3, percentageVerified: 1.04, riskColor: 'yellow' },
+    { country: 'italy', incoming: 1600, verifiedCitizens: 12, verifiedForeigners: 5, percentageVerified: 1.06, riskColor: 'yellow' },
+    { country: 'spain', incoming: 1700, verifiedCitizens: 25, verifiedForeigners: 15, percentageVerified: 2.35, riskColor: 'yellow' },
+    { country: 'canada', incoming: 1200, verifiedCitizens: 6, verifiedForeigners: 2, percentageVerified: 0.67, riskColor: 'green' },
+    { country: 'russia', incoming: 1500, verifiedCitizens: 45, verifiedForeigners: 15, percentageVerified: 4.0, riskColor: 'red' },
+    { country: 'china', incoming: 2800, verifiedCitizens: 18, verifiedForeigners: 2, percentageVerified: 0.71, riskColor: 'green' },
+    { country: 'japan', incoming: 1200, verifiedCitizens: 8, verifiedForeigners: 5, percentageVerified: 1.08, riskColor: 'yellow' },
+    { country: 'southKorea', incoming: 1100, verifiedCitizens: 6, verifiedForeigners: 2, percentageVerified: 0.73, riskColor: 'green' },
+    { country: 'australia', incoming: 1300, verifiedCitizens: 5, verifiedForeigners: 1, percentageVerified: 0.46, riskColor: 'green' },
+    { country: 'brazil', incoming: 2300, verifiedCitizens: 50, verifiedForeigners: 35, percentageVerified: 3.7, riskColor: 'red' },
+    { country: 'india', incoming: 2800, verifiedCitizens: 63, verifiedForeigners: 30, percentageVerified: 3.32, riskColor: 'red' },
+    { country: 'ukraine', incoming: 1100, verifiedCitizens: 15, verifiedForeigners: 8, percentageVerified: 2.09, riskColor: 'yellow' },
+    { country: 'turkey', incoming: 1400, verifiedCitizens: 20, verifiedForeigners: 10, percentageVerified: 2.14, riskColor: 'yellow' },
+    { country: 'egypt', incoming: 900, verifiedCitizens: 12, verifiedForeigners: 5, percentageVerified: 1.89, riskColor: 'yellow' },
+    { country: 'argentina', incoming: 800, verifiedCitizens: 6, verifiedForeigners: 4, percentageVerified: 1.25, riskColor: 'yellow' },
+    { country: 'southAfrica', incoming: 750, verifiedCitizens: 9, verifiedForeigners: 6, percentageVerified: 2.0, riskColor: 'yellow' },
+  ],
+  'last 3 months': [
+    { country: 'unitedStates', incoming: 12000, verifiedCitizens: 200, verifiedForeigners: 100, percentageVerified: 2.5, riskColor: 'yellow' },
+    { country: 'unitedKingdom', incoming: 8000, verifiedCitizens: 80, verifiedForeigners: 40, percentageVerified: 1.5, riskColor: 'yellow' },
+    { country: 'france', incoming: 7500, verifiedCitizens: 60, verifiedForeigners: 30, percentageVerified: 1.2, riskColor: 'yellow' },
+    { country: 'germany', incoming: 10000, verifiedCitizens: 90, verifiedForeigners: 10, percentageVerified: 1.0, riskColor: 'yellow' },
+    { country: 'italy', incoming: 6500, verifiedCitizens: 50, verifiedForeigners: 20, percentageVerified: 1.08, riskColor: 'yellow' },
+    { country: 'spain', incoming: 7200, verifiedCitizens: 100, verifiedForeigners: 60, percentageVerified: 2.22, riskColor: 'yellow' },
+    { country: 'canada', incoming: 5000, verifiedCitizens: 25, verifiedForeigners: 10, percentageVerified: 0.7, riskColor: 'green' },
+    { country: 'russia', incoming: 6000, verifiedCitizens: 180, verifiedForeigners: 60, percentageVerified: 4.0, riskColor: 'red' },
+    { country: 'china', incoming: 11000, verifiedCitizens: 70, verifiedForeigners: 10, percentageVerified: 0.73, riskColor: 'green' },
+    { country: 'japan', incoming: 4800, verifiedCitizens: 30, verifiedForeigners: 20, percentageVerified: 1.04, riskColor: 'yellow' },
+    { country: 'southKorea', incoming: 4500, verifiedCitizens: 25, verifiedForeigners: 10, percentageVerified: 0.78, riskColor: 'green' },
+    { country: 'australia', incoming: 5200, verifiedCitizens: 20, verifiedForeigners: 5, percentageVerified: 0.48, riskColor: 'green' },
+    { country: 'brazil', incoming: 9000, verifiedCitizens: 200, verifiedForeigners: 150, percentageVerified: 3.89, riskColor: 'red' },
+    { country: 'india', incoming: 11000, verifiedCitizens: 250, verifiedForeigners: 120, percentageVerified: 3.36, riskColor: 'red' },
+    { country: 'ukraine', incoming: 4300, verifiedCitizens: 60, verifiedForeigners: 30, percentageVerified: 2.09, riskColor: 'yellow' },
+    { country: 'turkey', incoming: 5600, verifiedCitizens: 80, verifiedForeigners: 40, percentageVerified: 2.14, riskColor: 'yellow' },
+    { country: 'egypt', incoming: 3700, verifiedCitizens: 50, verifiedForeigners: 20, percentageVerified: 1.89, riskColor: 'yellow' },
+    { country: 'argentina', incoming: 3100, verifiedCitizens: 25, verifiedForeigners: 15, percentageVerified: 1.29, riskColor: 'yellow' },
+    { country: 'southAfrica', incoming: 2900, verifiedCitizens: 35, verifiedForeigners: 25, percentageVerified: 2.07, riskColor: 'yellow' },
+  ],
+  'last 6 months': [
+    { country: 'unitedStates', incoming: 36000, verifiedCitizens: 600, verifiedForeigners: 300, percentageVerified: 2.5, riskColor: 'yellow' },
+    { country: 'unitedKingdom', incoming: 24000, verifiedCitizens: 240, verifiedForeigners: 120, percentageVerified: 1.5, riskColor: 'yellow' },
+    { country: 'france', incoming: 22500, verifiedCitizens: 180, verifiedForeigners: 90, percentageVerified: 1.2, riskColor: 'yellow' },
+    { country: 'germany', incoming: 30000, verifiedCitizens: 270, verifiedForeigners: 30, percentageVerified: 1.0, riskColor: 'yellow' },
+    { country: 'italy', incoming: 19500, verifiedCitizens: 150, verifiedForeigners: 60, percentageVerified: 1.08, riskColor: 'yellow' },
+    { country: 'spain', incoming: 21600, verifiedCitizens: 300, verifiedForeigners: 180, percentageVerified: 2.22, riskColor: 'yellow' },
+    { country: 'canada', incoming: 15000, verifiedCitizens: 75, verifiedForeigners: 30, percentageVerified: 0.7, riskColor: 'green' },
+    { country: 'russia', incoming: 18000, verifiedCitizens: 540, verifiedForeigners: 180, percentageVerified: 4.0, riskColor: 'red' },
+    { country: 'china', incoming: 33000, verifiedCitizens: 210, verifiedForeigners: 30, percentageVerified: 0.73, riskColor: 'green' },
+    { country: 'japan', incoming: 14400, verifiedCitizens: 90, verifiedForeigners: 60, percentageVerified: 1.04, riskColor: 'yellow' },
+    { country: 'southKorea', incoming: 13500, verifiedCitizens: 75, verifiedForeigners: 30, percentageVerified: 0.78, riskColor: 'green' },
+    { country: 'australia', incoming: 15600, verifiedCitizens: 60, verifiedForeigners: 15, percentageVerified: 0.48, riskColor: 'green' },
+    { country: 'brazil', incoming: 27000, verifiedCitizens: 600, verifiedForeigners: 450, percentageVerified: 3.89, riskColor: 'red' },
+    { country: 'india', incoming: 33000, verifiedCitizens: 750, verifiedForeigners: 360, percentageVerified: 3.36, riskColor: 'red' },
+    { country: 'ukraine', incoming: 12900, verifiedCitizens: 180, verifiedForeigners: 90, percentageVerified: 2.09, riskColor: 'yellow' },
+    { country: 'turkey', incoming: 16800, verifiedCitizens: 240, verifiedForeigners: 120, percentageVerified: 2.14, riskColor: 'yellow' },
+    { country: 'egypt', incoming: 11100, verifiedCitizens: 150, verifiedForeigners: 60, percentageVerified: 1.89, riskColor: 'yellow' },
+    { country: 'argentina', incoming: 9300, verifiedCitizens: 75, verifiedForeigners: 45, percentageVerified: 1.29, riskColor: 'yellow' },
+    { country: 'southAfrica', incoming: 8700, verifiedCitizens: 105, verifiedForeigners: 75, percentageVerified: 2.07, riskColor: 'yellow' },
+  ],
+  'last 1 year': [
+    { country: 'unitedStates', incoming: 72000, verifiedCitizens: 1200, verifiedForeigners: 600, percentageVerified: 2.5, riskColor: 'yellow' },
+    { country: 'unitedKingdom', incoming: 48000, verifiedCitizens: 480, verifiedForeigners: 240, percentageVerified: 1.5, riskColor: 'yellow' },
+    { country: 'france', incoming: 45000, verifiedCitizens: 360, verifiedForeigners: 180, percentageVerified: 1.2, riskColor: 'yellow' },
+    { country: 'germany', incoming: 60000, verifiedCitizens: 540, verifiedForeigners: 60, percentageVerified: 1.0, riskColor: 'yellow' },
+    { country: 'italy', incoming: 39000, verifiedCitizens: 300, verifiedForeigners: 120, percentageVerified: 1.08, riskColor: 'yellow' },
+    { country: 'spain', incoming: 43200, verifiedCitizens: 600, verifiedForeigners: 360, percentageVerified: 2.22, riskColor: 'yellow' },
+    { country: 'canada', incoming: 30000, verifiedCitizens: 150, verifiedForeigners: 60, percentageVerified: 0.7, riskColor: 'green' },
+    { country: 'russia', incoming: 36000, verifiedCitizens: 1080, verifiedForeigners: 360, percentageVerified: 4.0, riskColor: 'red' },
+    { country: 'china', incoming: 66000, verifiedCitizens: 420, verifiedForeigners: 60, percentageVerified: 0.73, riskColor: 'green' },
+    { country: 'japan', incoming: 28800, verifiedCitizens: 180, verifiedForeigners: 120, percentageVerified: 1.04, riskColor: 'yellow' },
+    { country: 'southKorea', incoming: 27000, verifiedCitizens: 150, verifiedForeigners: 60, percentageVerified: 0.78, riskColor: 'green' },
+    { country: 'australia', incoming: 31200, verifiedCitizens: 120, verifiedForeigners: 30, percentageVerified: 0.48, riskColor: 'green' },
+    { country: 'brazil', incoming: 54000, verifiedCitizens: 1200, verifiedForeigners: 900, percentageVerified: 3.89, riskColor: 'red' },
+    { country: 'india', incoming: 66000, verifiedCitizens: 1500, verifiedForeigners: 720, percentageVerified: 3.36, riskColor: 'red' },
+    { country: 'ukraine', incoming: 25800, verifiedCitizens: 360, verifiedForeigners: 180, percentageVerified: 2.09, riskColor: 'yellow' },
+    { country: 'turkey', incoming: 33600, verifiedCitizens: 480, verifiedForeigners: 240, percentageVerified: 2.14, riskColor: 'yellow' },
+    { country: 'egypt', incoming: 22200, verifiedCitizens: 300, verifiedForeigners: 120, percentageVerified: 1.89, riskColor: 'yellow' },
+    { country: 'argentina', incoming: 18600, verifiedCitizens: 150, verifiedForeigners: 90, percentageVerified: 1.29, riskColor: 'yellow' },
+    { country: 'southAfrica', incoming: 17400, verifiedCitizens: 210, verifiedForeigners: 150, percentageVerified: 2.07, riskColor: 'yellow' },
+  ],
+  'entire period': [
+    { country: 'unitedStates', incoming: 150000, verifiedCitizens: 2500, verifiedForeigners: 1250, percentageVerified: 2.5, riskColor: 'yellow' },
+    { country: 'unitedKingdom', incoming: 100000, verifiedCitizens: 1000, verifiedForeigners: 500, percentageVerified: 1.5, riskColor: 'yellow' },
+    { country: 'france', incoming: 90000, verifiedCitizens: 720, verifiedForeigners: 360, percentageVerified: 1.2, riskColor: 'yellow' },
+    { country: 'germany', incoming: 120000, verifiedCitizens: 1080, verifiedForeigners: 120, percentageVerified: 1.0, riskColor: 'yellow' },
+    { country: 'italy', incoming: 78000, verifiedCitizens: 600, verifiedForeigners: 240, percentageVerified: 1.08, riskColor: 'yellow' },
+    { country: 'spain', incoming: 86400, verifiedCitizens: 1200, verifiedForeigners: 720, percentageVerified: 2.22, riskColor: 'yellow' },
+    { country: 'canada', incoming: 60000, verifiedCitizens: 300, verifiedForeigners: 120, percentageVerified: 0.7, riskColor: 'green' },
+    { country: 'russia', incoming: 72000, verifiedCitizens: 2160, verifiedForeigners: 720, percentageVerified: 4.0, riskColor: 'red' },
+    { country: 'china', incoming: 132000, verifiedCitizens: 840, verifiedForeigners: 120, percentageVerified: 0.73, riskColor: 'green' },
+    { country: 'japan', incoming: 57600, verifiedCitizens: 360, verifiedForeigners: 240, percentageVerified: 1.04, riskColor: 'yellow' },
+    { country: 'southKorea', incoming: 54000, verifiedCitizens: 300, verifiedForeigners: 120, percentageVerified: 0.78, riskColor: 'green' },
+    { country: 'australia', incoming: 62400, verifiedCitizens: 240, verifiedForeigners: 60, percentageVerified: 0.48, riskColor: 'green' },
+    { country: 'brazil', incoming: 108000, verifiedCitizens: 2400, verifiedForeigners: 1800, percentageVerified: 3.89, riskColor: 'red' },
+    { country: 'india', incoming: 132000, verifiedCitizens: 3000, verifiedForeigners: 1440, percentageVerified: 3.36, riskColor: 'red' },
+    { country: 'ukraine', incoming: 51600, verifiedCitizens: 720, verifiedForeigners: 360, percentageVerified: 2.09, riskColor: 'yellow' },
+    { country: 'turkey', incoming: 67200, verifiedCitizens: 960, verifiedForeigners: 480, percentageVerified: 2.14, riskColor: 'yellow' },
+    { country: 'egypt', incoming: 44400, verifiedCitizens: 600, verifiedForeigners: 240, percentageVerified: 1.89, riskColor: 'yellow' },
+    { country: 'argentina', incoming: 37200, verifiedCitizens: 300, verifiedForeigners: 180, percentageVerified: 1.29, riskColor: 'yellow' },
+    { country: 'southAfrica', incoming: 34800, verifiedCitizens: 420, verifiedForeigners: 300, percentageVerified: 2.07, riskColor: 'yellow' },
+  ]
+};
+
+

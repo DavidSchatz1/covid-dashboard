@@ -1,0 +1,27 @@
+@import '../styles.scss';
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto; // מונע גלישה
+  min-width: 0;   // זה הכי חשוב!
+  background-color: var(--grey-background);
+  color: var(--text-color);
+
+}
+
+.app-layout {
+  display: flex;
+}
+
+#overview,
+#key-data,
+#childCases,
+#vaccination-effectiveness,
+#deaths,
+#testing,
+#additional-data,
+#reinfectionandrecovery,
+#vaccination {
+  scroll-margin-top: 130px;
+}

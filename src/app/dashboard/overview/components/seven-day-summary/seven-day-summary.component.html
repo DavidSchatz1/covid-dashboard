@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>{{ OverviewField.Last7Days | LanguagesPipe }}</h1>
+  <div class="cards-container">
+    <div class="card">
+      <h3> {{ OverviewField.ConfirmedCases| LanguagesPipe }} </h3>
+      <app-info-icon [infoText]="OverviewField.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
+      <p class="main-value">
+        {{ NumericField.last7daysConfirmedCases | NumericDataPipe }}
+      </p>
+      <small>
+        <span class="number-value">
+        %{{ NumericField.last7daysConfirmedPercent| NumericDataPipe }}+
+        </span>
+        {{ OverviewField.Prior7Days | LanguagesPipe }}
+      </small>
+    </div>
+    <div class="card">
+      <h3> {{ OverviewField.Deaths| LanguagesPipe }} </h3>
+      <app-info-icon [infoText]="OverviewField.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
+      <p class="main-value">
+        {{ NumericField.last7daysDeaths| NumericDataPipe }}
+      </p>
+      <small>
+        <span class="number-value">
+          %{{ NumericField.last7daysDeathsPercent| NumericDataPipe }}
+        </span>
+        {{ OverviewField.Prior7Days | LanguagesPipe }}
+      </small>
+    </div>
+    <div class="card">
+      <h3> {{ OverviewField.Tests| LanguagesPipe }} </h3>
+      <app-info-icon [infoText]="OverviewField.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
+      <p class="main-value">
+        {{ NumericField.last7daysTests| NumericDataPipe }}
+      </p>
+      <small>
+        <span class="number-value">
+           +{{ NumericField.last7daysTestsPercent| NumericDataPipe }}%
+        </span>
+        {{ OverviewField.Prior7Days | LanguagesPipe }}
+      </small>
+      <br>
+      <small>
+        <span class="number-value">
+          {{NumericField.last7daysPositiveResults| NumericDataPipe }}%
+        </span>
+        {{ OverviewField.PositiveResults| LanguagesPipe }}
+      </small>
+    </div>
+  </div>
+</div>

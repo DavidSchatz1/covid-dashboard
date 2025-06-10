@@ -1,0 +1,62 @@
+<div class="chart-card">
+  <div class="title">
+    <div class="title1section">
+        <h3>{{ cityHealthColorsFields.ColorProgram | LanguagesPipe }}</h3>
+        <app-info-icon [infoText]="cityHealthColorsFields.ColorProgramInfo | LanguagesPipe"></app-info-icon>
+    </div>
+    <app-more-menu></app-more-menu>
+  </div>
+  <div>
+    {{ cityHealthColorsFields.LastUpdate | LanguagesPipe }} 
+  </div>
+  <app-city-filter 
+    [cities]="cityData"
+    (filterChanged)="onFilterChange($event)">
+  </app-city-filter>
+  <div class="occupancy-table-wrapper">
+    <table class="occupancy-table">
+      <thead>
+        <tr>
+          <th (click)="sortBy('translatedName')">
+            {{ cityHealthColorsFields.city | LanguagesPipe }}
+            <span class="sort-arrow">{{ getSortSymbol('translatedName') }}</span>
+          </th>
+          <th (click)="sortBy('newCasesPer10k')">
+            {{ cityHealthColorsFields.newconfirmedevery10thousand | LanguagesPipe }}
+            <span class="sort-arrow">{{ getSortSymbol('newCasesPer10k') }}</span>
+          </th>
+          <th (click)="sortBy('positivityPercent')">
+            {{ cityHealthColorsFields.positiveResults | LanguagesPipe }}
+            <span class="sort-arrow">{{ getSortSymbol('positivityPercent') }}</span>
+          </th>
+          <th (click)="sortBy('changeRate')">
+            {{ cityHealthColorsFields.changeRate | LanguagesPipe }}
+            <span class="sort-arrow">{{ getSortSymbol('changeRate') }}</span>
+          </th>
+          <th (click)="sortBy('currentSick')">
+            {{ cityHealthColorsFields.ActiveSick | LanguagesPipe }}
+            <span class="sort-arrow">{{ getSortSymbol('currentSick') }}</span>
+          </th>
+          <th (click)="sortBy('grade')">
+            {{ cityHealthColorsFields.gradeAndColor | LanguagesPipe }}
+            <span class="sort-arrow">{{ getSortSymbol('grade') }}</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of displayedData">
+          <td>{{ city.name | LanguagesPipe }}</td>
+          <td>{{ city.newCasesPer10k.toFixed(1) }}</td>
+          <td>{{ city.positivityPercent.toFixed(1) }}</td>
+          <td>{{ city.changeRate.toFixed(1) }}</td>
+          <td>{{ city.currentSick }}</td>
+          <td>
+            <div [ngClass]="getRowColor(city.grade)">
+              {{ city.grade.toFixed(1) }}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

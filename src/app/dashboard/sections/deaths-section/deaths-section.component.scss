@@ -1,0 +1,25 @@
+@import 'variables';
+.deathsChart-container{
+  color: var(--text-color);
+  margin: 10px 20px 0;
+  padding-inline-start: 15px;
+  padding-bottom: 30px ;
+  border-bottom: 1px solid $border-color;
+
+  .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title1section{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+  }
+  h3{
+    display: inline-block;
+  }
+  
+}
+}

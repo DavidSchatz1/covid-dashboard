@@ -1,0 +1,31 @@
+<div class="dropdown-wrapper">
+  <div class="dropdown-toggle" (click)="toggleDropdown()">
+    {{ selectedHospitals.length }} {{hospitalTableFields.HospitalsChosen| LanguagesPipe}}
+    <span class="arrow" [class.open]="isDropdownOpen">&#x203A;</span>
+  </div>
+  
+
+  <div class="dropdown-panel" *ngIf="isDropdownOpen">
+    <input
+      type="text"
+      [placeholder]="hospitalTableFields.SearchForHospital | LanguagesPipe" 
+      [(ngModel)]="searchTerm"
+      class="search-box"
+    />
+
+    <div class="checkbox-list">
+      <label *ngFor="let hospital of filteredHospitals">
+        <input
+          type="checkbox"
+          [(ngModel)]="hospital.selected"
+        />
+        {{ hospital.name | LanguagesPipe }}
+      </label>
+    </div>
+
+    <div class="selector-actions">
+      <button (click)="applyFilter()">{{hospitalTableFields.Save| LanguagesPipe}}</button>
+      <button (click)="cancelFilter()">{{hospitalTableFields.Cancel| LanguagesPipe}}</button>
+    </div>
+  </div>
+</div>

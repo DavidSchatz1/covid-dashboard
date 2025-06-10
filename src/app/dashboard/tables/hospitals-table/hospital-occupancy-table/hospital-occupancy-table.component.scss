@@ -1,0 +1,61 @@
+@import 'variables';
+.last-update {
+  background-color: var(--more-hover-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 20px;
+  width: fit-content;
+  padding: 5px;
+}
+.occupancy-table-wrapper {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.occupancy-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-color);
+
+  th, td {
+    text-align: right;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+
+  th {
+    background-color: var(--more-hover-color);
+    cursor: pointer;
+    user-select: none;
+    position: sticky;
+    top: -2px;
+    z-index: 1;
+  }
+
+  td {
+    background-color: var(--background-color);
+  }
+
+  .sort-arrow {
+    margin-right: 5px;
+    font-size: 12px;
+    color: $arrow-blue;
+  }
+}
+
+.bar-container {
+  width: 60px;
+  height: 7px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.bar-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+

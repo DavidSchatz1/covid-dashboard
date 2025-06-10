@@ -1,0 +1,109 @@
+<div class="card">
+
+  <!-- 
+   -->
+  <!-- Confirmed Cases -->
+  <ng-container *ngIf="field === OverviewField.ConfirmedCases">
+    <h3>{{ OverviewField.NewCases | LanguagesPipe }}</h3>
+    <app-info-icon [infoText]="OverviewField.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
+    <p class="main-value">
+      {{ numericField.ConfirmedYesterday| NumericDataPipe }}
+    </p>
+    <small>
+      <span class="number-value">
+      {{ numericField.ConfirmedSinceMidnight| NumericDataPipe }}
+      </span>
+        {{ OverviewField.SinceMidnight | LanguagesPipe }} 
+    </small>
+    <br>
+    <small>
+      <span class="number-value">
+        {{ numericField.ConfirmedTotal| NumericDataPipe }}
+      </span>
+      {{ OverviewField.Total| LanguagesPipe }}
+    </small>
+  </ng-container>
+
+  <!-- Active Cases -->
+  <ng-container *ngIf="field === OverviewField.ActiveCases">
+    <h3>{{ OverviewField.ActiveCases | LanguagesPipe }}</h3>
+    <app-info-icon [infoText]="OverviewField.ActiveCasesInfo | LanguagesPipe"></app-info-icon>
+    <p class="main-value">
+      {{ numericField.ActiveCurrent| NumericDataPipe }}
+    </p>
+    <small>
+      <span class="number-value">
+        {{numericField.ActiveHospitalized | NumericDataPipe}}
+      </span>
+      {{ OverviewField.Hospitalized| LanguagesPipe }}
+    </small>
+  </ng-container>
+
+  <!-- Deaths -->
+  <ng-container *ngIf="field === OverviewField.Deaths">
+    <h3>{{ OverviewField.CumulativeDeaths| LanguagesPipe }}</h3>
+    <app-info-icon [infoText]="OverviewField.cumulativeInfo | LanguagesPipe"></app-info-icon>
+    <p class="main-value">
+      {{ numericField.DeceasedTotal| NumericDataPipe }}
+    </p>
+  </ng-container>
+
+  <!-- vaccinated -->
+  <ng-container *ngIf="field === OverviewField.Vaccinated">
+    <h3>{{ OverviewField.Vaccinated| LanguagesPipe }}</h3>
+    <app-info-icon [infoText]="OverviewField.vaccinatedInfo | LanguagesPipe"></app-info-icon>
+    <small class="line">
+       {{ OverviewField.FirstDose| LanguagesPipe }}
+      <span class="number-value-big">
+       {{ numericField.VaccinationsDose1| NumericDataPipe }}
+      </span>
+    </small>
+    <small class="line">
+      {{ OverviewField.SecondDose| LanguagesPipe }}
+      <span class="number-value-big">
+      {{ numericField.VaccinationsDose2| NumericDataPipe }}
+      </span>
+    </small>
+    <small class="line">
+      {{ OverviewField.ThirdDose| LanguagesPipe }}
+      <span class="number-value-big">
+       {{ numericField.VaccinationsDose3| NumericDataPipe }}
+      </span>
+    </small>
+    <small class="line">
+      {{ OverviewField.FourthDose| LanguagesPipe }}
+      <span class="number-value-big">
+       {{ numericField.VaccinationsDose4| NumericDataPipe }}
+      </span>
+    </small>
+    <small class="line">
+      {{ OverviewField.Omicron| LanguagesPipe }}
+      <span class="number-value-big" style="padding-inline-start: 18px;">
+       {{ numericField.VaccinationsOmicron| NumericDataPipe }}
+      </span>
+    </small>
+  </ng-container>
+
+  <!-- percent positives -->
+  <ng-container *ngIf="field === OverviewField.PercentPositives">
+    <h3>{{ OverviewField.PercentPositives| LanguagesPipe }}</h3>
+    <app-info-icon [infoText]="OverviewField.percentPositivesInfo | LanguagesPipe"></app-info-icon>    
+    <p class="main-value">
+      {{ numericField.TestsPositiveRate| NumericDataPipe }}%
+    </p>
+    <small class="line">
+      <span class="number-value">
+      {{ numericField.TestsVirusDetection| NumericDataPipe }}
+      </span>
+      {{ OverviewField.TestedYesterday| LanguagesPipe }}
+      
+    </small>
+    <small class="line">
+      <span class="number-value">
+      {{ numericField.TestsTotal| NumericDataPipe }}
+      </span>
+      {{ OverviewField.TotalTestsYesterday| LanguagesPipe }}
+    </small>
+  </ng-container>
+
+</div>

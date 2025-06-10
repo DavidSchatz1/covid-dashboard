@@ -1,0 +1,19 @@
+<div class="key-data-container">
+  <p class="subtitle">
+      {{KeyDataFields.Title| LanguagesPipe}}
+  </p> 
+  
+  <div class="chart-card">
+    <div class="title">
+      <div class="title1section">
+        <h3>{{KeyDataFields.Cases7DaysAverage| LanguagesPipe}}</h3>
+        <app-info-icon [infoText]="KeyDataFields.WeekAverageExplanation| LanguagesPipe"></app-info-icon>
+      </div>
+      <app-more-menu></app-more-menu>
+    </div>
+    <ng-container *ngIf="option" >
+      <div echarts [options]="option" style="max-width: 600px; max-height: 300px; padding: 10px;"></div>
+    </ng-container>
+  </div>
+
+</div>

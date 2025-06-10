@@ -1,0 +1,27 @@
+.loading-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  z-index: 9999;
+}
+
+.line {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right,
+    #00bfa5,  /* turquoise */
+    #33ccff,  /* light blue */
+    #00d4b4,  /* turquoise */
+    #00cc66,  /* green */
+    #99ff00   /* yellowish-green */
+  );
+  
+transition: width 4s ease-out;
+}
+
+.line.active {
+  width: 100%;
+}

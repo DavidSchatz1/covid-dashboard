@@ -18,10 +18,16 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
+    // בדיקה
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    //
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    // "skipLibCheck": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

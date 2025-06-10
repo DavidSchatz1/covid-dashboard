@@ -1,0 +1,810 @@
+[
+  {
+    "name": "Jerusalem",
+    "newCasesPer10k": 6.1,
+    "positivityPercent": 4.7,
+    "changeRate": 2.5,
+    "currentSick": 1270,
+    "grade": 4.77
+  },
+  {
+    "name": "TelAviv",
+    "newCasesPer10k": 3.1,
+    "positivityPercent": 13.1,
+    "changeRate": -5.4,
+    "currentSick": 1222,
+    "grade": 4.5
+  },
+  {
+    "name": "Haifa",
+    "newCasesPer10k": 6.1,
+    "positivityPercent": 6.1,
+    "changeRate": -5.3,
+    "currentSick": 4738,
+    "grade": 4.79
+  },
+  {
+    "name": "RishonLeZion",
+    "newCasesPer10k": 8.1,
+    "positivityPercent": 13.1,
+    "changeRate": 17.8,
+    "currentSick": 1191,
+    "grade": 11.13
+  },
+  {
+    "name": "PetahTikva",
+    "newCasesPer10k": 2.1,
+    "positivityPercent": 8.5,
+    "changeRate": 6.9,
+    "currentSick": 2551,
+    "grade": 5.62
+  },
+  {
+    "name": "Ashdod",
+    "newCasesPer10k": 3.4,
+    "positivityPercent": 10.2,
+    "changeRate": -9.2,
+    "currentSick": 2713,
+    "grade": 3.48
+  },
+  {
+    "name": "Netanya",
+    "newCasesPer10k": 9.5,
+    "positivityPercent": 13.2,
+    "changeRate": 10.6,
+    "currentSick": 4324,
+    "grade": 11.32
+  },
+  {
+    "name": "BeerSheva",
+    "newCasesPer10k": 9.1,
+    "positivityPercent": 11.2,
+    "changeRate": 6.8,
+    "currentSick": 500,
+    "grade": 8.53
+  },
+  {
+    "name": "BneiBrak",
+    "newCasesPer10k": 8.4,
+    "positivityPercent": 1.8,
+    "changeRate": -2.1,
+    "currentSick": 3214,
+    "grade": 4.55
+  },
+  {
+    "name": "Holon",
+    "newCasesPer10k": 3.1,
+    "positivityPercent": 10.2,
+    "changeRate": 11.5,
+    "currentSick": 3951,
+    "grade": 7.92
+  },
+  {
+    "name": "RamatGan",
+    "newCasesPer10k": 8.0,
+    "positivityPercent": 13.3,
+    "changeRate": 16.5,
+    "currentSick": 763,
+    "grade": 10.74
+  },
+  {
+    "name": "Rehovot",
+    "newCasesPer10k": 4.2,
+    "positivityPercent": 12.4,
+    "changeRate": 7.5,
+    "currentSick": 574,
+    "grade": 7.09
+  },
+  {
+    "name": "BatYam",
+    "newCasesPer10k": 1.4,
+    "positivityPercent": 12.8,
+    "changeRate": 17.0,
+    "currentSick": 2517,
+    "grade": 8.64
+  },
+  {
+    "name": "Ashkelon",
+    "newCasesPer10k": 9.4,
+    "positivityPercent": 12.2,
+    "changeRate": -1.8,
+    "currentSick": 722,
+    "grade": 7.3
+  },
+  {
+    "name": "Herzliya",
+    "newCasesPer10k": 1.9,
+    "positivityPercent": 14.8,
+    "changeRate": 15.9,
+    "currentSick": 2940,
+    "grade": 9.36
+  },
+  {
+    "name": "KfarSaba",
+    "newCasesPer10k": 4.4,
+    "positivityPercent": 2.5,
+    "changeRate": 13.1,
+    "currentSick": 1802,
+    "grade": 5.73
+  },
+  {
+    "name": "Hadera",
+    "newCasesPer10k": 7.3,
+    "positivityPercent": 5.4,
+    "changeRate": 17.3,
+    "currentSick": 4825,
+    "grade": 9.61
+  },
+  {
+    "name": "Modiin",
+    "newCasesPer10k": 8.6,
+    "positivityPercent": 10.3,
+    "changeRate": 16.0,
+    "currentSick": 3815,
+    "grade": 11.0
+  },
+  {
+    "name": "Lod",
+    "newCasesPer10k": 8.2,
+    "positivityPercent": 8.2,
+    "changeRate": 3.5,
+    "currentSick": 3295,
+    "grade": 7.54
+  },
+  {
+    "name": "Raanana",
+    "newCasesPer10k": 4.5,
+    "positivityPercent": 10.6,
+    "changeRate": -3.4,
+    "currentSick": 4776,
+    "grade": 5.89
+  },
+  {
+    "name": "Ramla",
+    "newCasesPer10k": 6.1,
+    "positivityPercent": 1.2,
+    "changeRate": -2.3,
+    "currentSick": 1375,
+    "grade": 2.8
+  },
+  {
+    "name": "Nahariya",
+    "newCasesPer10k": 8.0,
+    "positivityPercent": 7.5,
+    "changeRate": 1.2,
+    "currentSick": 4946,
+    "grade": 7.34
+  },
+  {
+    "name": "Acre",
+    "newCasesPer10k": 7.4,
+    "positivityPercent": 5.0,
+    "changeRate": -3.1,
+    "currentSick": 151,
+    "grade": 3.89
+  },
+  {
+    "name": "Eilat",
+    "newCasesPer10k": 2.6,
+    "positivityPercent": 13.6,
+    "changeRate": 14.6,
+    "currentSick": 3475,
+    "grade": 9.2
+  },
+  {
+    "name": "KiryatAta",
+    "newCasesPer10k": 9.7,
+    "positivityPercent": 14.4,
+    "changeRate": 11.5,
+    "currentSick": 3236,
+    "grade": 11.58
+  },
+  {
+    "name": "KiryatGat",
+    "newCasesPer10k": 5.3,
+    "positivityPercent": 2.6,
+    "changeRate": 8.9,
+    "currentSick": 2734,
+    "grade": 5.59
+  },
+  {
+    "name": "KiryatMotzkin",
+    "newCasesPer10k": 8.5,
+    "positivityPercent": 2.8,
+    "changeRate": 12.7,
+    "currentSick": 162,
+    "grade": 6.83
+  },
+  {
+    "name": "KiryatYam",
+    "newCasesPer10k": 4.0,
+    "positivityPercent": 7.2,
+    "changeRate": 2.2,
+    "currentSick": 2230,
+    "grade": 4.94
+  },
+  {
+    "name": "Nesher",
+    "newCasesPer10k": 8.0,
+    "positivityPercent": 7.2,
+    "changeRate": -5.0,
+    "currentSick": 144,
+    "grade": 4.41
+  },
+  {
+    "name": "Yavne",
+    "newCasesPer10k": 5.1,
+    "positivityPercent": 4.6,
+    "changeRate": -4.8,
+    "currentSick": 383,
+    "grade": 2.59
+  },
+  {
+    "name": "OrYehuda",
+    "newCasesPer10k": 4.3,
+    "positivityPercent": 1.6,
+    "changeRate": 4.2,
+    "currentSick": 527,
+    "grade": 3.22
+  },
+  {
+    "name": "Tiberias",
+    "newCasesPer10k": 5.5,
+    "positivityPercent": 10.9,
+    "changeRate": -4.3,
+    "currentSick": 2517,
+    "grade": 5.45
+  },
+  {
+    "name": "Dimona",
+    "newCasesPer10k": 1.8,
+    "positivityPercent": 4.1,
+    "changeRate": 13.1,
+    "currentSick": 2222,
+    "grade": 5.31
+  },
+  {
+    "name": "Sderot",
+    "newCasesPer10k": 5.1,
+    "positivityPercent": 4.0,
+    "changeRate": 9.9,
+    "currentSick": 4140,
+    "grade": 6.6
+  },
+  {
+    "name": "Yehud",
+    "newCasesPer10k": 9.8,
+    "positivityPercent": 8.9,
+    "changeRate": 0.4,
+    "currentSick": 3007,
+    "grade": 7.67
+  },
+  {
+    "name": "BeitShemesh",
+    "newCasesPer10k": 3.5,
+    "positivityPercent": 10.8,
+    "changeRate": -9.5,
+    "currentSick": 3881,
+    "grade": 4.03
+  },
+  {
+    "name": "UmmalFahm",
+    "newCasesPer10k": 4.3,
+    "positivityPercent": 12.3,
+    "changeRate": 2.0,
+    "currentSick": 2083,
+    "grade": 6.5
+  },
+  {
+    "name": "Tamra",
+    "newCasesPer10k": 6.6,
+    "positivityPercent": 11.2,
+    "changeRate": 3.9,
+    "currentSick": 4091,
+    "grade": 8.14
+  },
+  {
+    "name": "Sakhnin",
+    "newCasesPer10k": 9.8,
+    "positivityPercent": 7.8,
+    "changeRate": 3.4,
+    "currentSick": 3313,
+    "grade": 8.04
+  },
+  {
+    "name": "Arad",
+    "newCasesPer10k": 2.6,
+    "positivityPercent": 10.2,
+    "changeRate": -0.3,
+    "currentSick": 4356,
+    "grade": 5.49
+  },
+  {
+    "name": "Netivot",
+    "newCasesPer10k": 9.4,
+    "positivityPercent": 1.8,
+    "changeRate": -6.9,
+    "currentSick": 910,
+    "grade": 3.22
+  },
+  {
+    "name": "Ofakim",
+    "newCasesPer10k": 10.0,
+    "positivityPercent": 7.5,
+    "changeRate": 10.8,
+    "currentSick": 1170,
+    "grade": 8.8
+  },
+  {
+    "name": "MigdalHaEmek",
+    "newCasesPer10k": 1.4,
+    "positivityPercent": 4.6,
+    "changeRate": -5.3,
+    "currentSick": 3504,
+    "grade": 2.05
+  },
+  {
+    "name": "Karmiel",
+    "newCasesPer10k": 4.1,
+    "positivityPercent": 4.0,
+    "changeRate": 10.3,
+    "currentSick": 630,
+    "grade": 5.11
+  },
+  {
+    "name": "Tayibe",
+    "newCasesPer10k": 6.8,
+    "positivityPercent": 7.3,
+    "changeRate": 12.8,
+    "currentSick": 543,
+    "grade": 7.65
+  },
+  {
+    "name": "Qalansawe",
+    "newCasesPer10k": 4.7,
+    "positivityPercent": 6.8,
+    "changeRate": -8.7,
+    "currentSick": 1708,
+    "grade": 2.75
+  },
+  {
+    "name": "JisrazZarqa",
+    "newCasesPer10k": 7.2,
+    "positivityPercent": 13.9,
+    "changeRate": 2.1,
+    "currentSick": 1455,
+    "grade": 7.96
+  },
+  {
+    "name": "KafrQasim",
+    "newCasesPer10k": 3.3,
+    "positivityPercent": 6.2,
+    "changeRate": 3.9,
+    "currentSick": 609,
+    "grade": 4.16
+  },
+  {
+    "name": "KafrKana",
+    "newCasesPer10k": 8.9,
+    "positivityPercent": 7.9,
+    "changeRate": -9.2,
+    "currentSick": 1569,
+    "grade": 4.61
+  },
+  {
+    "name": "Arraba",
+    "newCasesPer10k": 5.2,
+    "positivityPercent": 4.3,
+    "changeRate": 8.1,
+    "currentSick": 4342,
+    "grade": 6.44
+  },
+  {
+    "name": "Shfaram",
+    "newCasesPer10k": 9.2,
+    "positivityPercent": 14.2,
+    "changeRate": 6.7,
+    "currentSick": 2167,
+    "grade": 10.0
+  },
+  {
+    "name": "DaliyatalKarmel",
+    "newCasesPer10k": 4.3,
+    "positivityPercent": 11.0,
+    "changeRate": 13.2,
+    "currentSick": 4200,
+    "grade": 9.06
+  },
+  {
+    "name": "Jaljulia",
+    "newCasesPer10k": 9.1,
+    "positivityPercent": 6.8,
+    "changeRate": -1.7,
+    "currentSick": 1366,
+    "grade": 5.8
+  },
+  {
+    "name": "Iksal",
+    "newCasesPer10k": 9.0,
+    "positivityPercent": 13.4,
+    "changeRate": -3.2,
+    "currentSick": 2471,
+    "grade": 7.8
+  },
+  {
+    "name": "EinMahil",
+    "newCasesPer10k": 8.5,
+    "positivityPercent": 7.8,
+    "changeRate": -6.8,
+    "currentSick": 1983,
+    "grade": 5.04
+  },
+  {
+    "name": "Yarka",
+    "newCasesPer10k": 1.5,
+    "positivityPercent": 10.7,
+    "changeRate": 9.6,
+    "currentSick": 970,
+    "grade": 6.05
+  },
+  {
+    "name": "MajdalKrum",
+    "newCasesPer10k": 2.6,
+    "positivityPercent": 14.2,
+    "changeRate": -4.7,
+    "currentSick": 3563,
+    "grade": 5.55
+  },
+  {
+    "name": "DeirHanna",
+    "newCasesPer10k": 3.2,
+    "positivityPercent": 6.6,
+    "changeRate": -7.3,
+    "currentSick": 4526,
+    "grade": 3.31
+  },
+  {
+    "name": "Reineh",
+    "newCasesPer10k": 7.1,
+    "positivityPercent": 6.8,
+    "changeRate": 13.1,
+    "currentSick": 1403,
+    "grade": 7.97
+  },
+  {
+    "name": "Mashhad",
+    "newCasesPer10k": 2.2,
+    "positivityPercent": 9.0,
+    "changeRate": 12.6,
+    "currentSick": 4357,
+    "grade": 7.55
+  },
+  {
+    "name": "Ilut",
+    "newCasesPer10k": 4.5,
+    "positivityPercent": 4.9,
+    "changeRate": -5.2,
+    "currentSick": 1749,
+    "grade": 2.81
+  },
+  {
+    "name": "Turan",
+    "newCasesPer10k": 2.0,
+    "positivityPercent": 10.4,
+    "changeRate": -0.9,
+    "currentSick": 2470,
+    "grade": 4.56
+  },
+  {
+    "name": "TelSheva",
+    "newCasesPer10k": 5.5,
+    "positivityPercent": 9.9,
+    "changeRate": 13.6,
+    "currentSick": 3681,
+    "grade": 9.12
+  },
+  {
+    "name": "Rahat",
+    "newCasesPer10k": 9.7,
+    "positivityPercent": 1.1,
+    "changeRate": 9.9,
+    "currentSick": 3952,
+    "grade": 7.51
+  },
+  {
+    "name": "Hura",
+    "newCasesPer10k": 9.1,
+    "positivityPercent": 1.3,
+    "changeRate": 14.8,
+    "currentSick": 3776,
+    "grade": 8.25
+  },
+  {
+    "name": "Arara",
+    "newCasesPer10k": 8.2,
+    "positivityPercent": 14.7,
+    "changeRate": -4.3,
+    "currentSick": 104,
+    "grade": 6.86
+  },
+  {
+    "name": "Kuseife",
+    "newCasesPer10k": 9.6,
+    "positivityPercent": 6.8,
+    "changeRate": 16.4,
+    "currentSick": 213,
+    "grade": 9.23
+  },
+  {
+    "name": "Laqiya",
+    "newCasesPer10k": 6.7,
+    "positivityPercent": 3.7,
+    "changeRate": 7.4,
+    "currentSick": 3964,
+    "grade": 6.59
+  },
+  {
+    "name": "AbuGhosh",
+    "newCasesPer10k": 5.6,
+    "positivityPercent": 8.8,
+    "changeRate": 0.1,
+    "currentSick": 3452,
+    "grade": 6.05
+  },
+  {
+    "name": "BeitJann",
+    "newCasesPer10k": 6.3,
+    "positivityPercent": 1.1,
+    "changeRate": 8.9,
+    "currentSick": 3300,
+    "grade": 5.73
+  },
+  {
+    "name": "Pekiin",
+    "newCasesPer10k": 6.9,
+    "positivityPercent": 9.3,
+    "changeRate": 17.1,
+    "currentSick": 2858,
+    "grade": 9.92
+  },
+  {
+    "name": "MaalotTarshiha",
+    "newCasesPer10k": 9.2,
+    "positivityPercent": 4.1,
+    "changeRate": -8.4,
+    "currentSick": 2858,
+    "grade": 4.18
+  },
+  {
+    "name": "Sderot",
+    "newCasesPer10k": 9.8,
+    "positivityPercent": 12.4,
+    "changeRate": -0.3,
+    "currentSick": 4836,
+    "grade": 9.19
+  },
+  {
+    "name": "Zefat",
+    "newCasesPer10k": 6.8,
+    "positivityPercent": 9.7,
+    "changeRate": -9.7,
+    "currentSick": 756,
+    "grade": 3.94
+  },
+  {
+    "name": "KiryatShmona",
+    "newCasesPer10k": 4.8,
+    "positivityPercent": 6.2,
+    "changeRate": 15.9,
+    "currentSick": 4415,
+    "grade": 8.43
+  },
+  {
+    "name": "Metula",
+    "newCasesPer10k": 9.4,
+    "positivityPercent": 1.5,
+    "changeRate": 17.4,
+    "currentSick": 984,
+    "grade": 8.02
+  },
+  {
+    "name": "MazkeretBatya",
+    "newCasesPer10k": 6.6,
+    "positivityPercent": 3.9,
+    "changeRate": 4.5,
+    "currentSick": 2719,
+    "grade": 5.62
+  },
+  {
+    "name": "Givatayim",
+    "newCasesPer10k": 7.3,
+    "positivityPercent": 8.4,
+    "changeRate": -0.7,
+    "currentSick": 1083,
+    "grade": 5.66
+  },
+  {
+    "name": "AlfeMenashe",
+    "newCasesPer10k": 3.9,
+    "positivityPercent": 3.1,
+    "changeRate": 12.4,
+    "currentSick": 2131,
+    "grade": 5.68
+  },
+  {
+    "name": "BeitarIllit",
+    "newCasesPer10k": 2.5,
+    "positivityPercent": 12.1,
+    "changeRate": 2.0,
+    "currentSick": 1342,
+    "grade": 5.48
+  },
+  {
+    "name": "ModiinIllit",
+    "newCasesPer10k": 7.9,
+    "positivityPercent": 11.7,
+    "changeRate": 9.0,
+    "currentSick": 2585,
+    "grade": 9.33
+  },
+  {
+    "name": "Elad",
+    "newCasesPer10k": 7.5,
+    "positivityPercent": 3.8,
+    "changeRate": 17.4,
+    "currentSick": 270,
+    "grade": 7.71
+  },
+  {
+    "name": "TiratCarmel",
+    "newCasesPer10k": 7.9,
+    "positivityPercent": 7.7,
+    "changeRate": 14.3,
+    "currentSick": 1560,
+    "grade": 8.85
+  },
+  {
+    "name": "OrAkiva",
+    "newCasesPer10k": 5.9,
+    "positivityPercent": 13.0,
+    "changeRate": -0.2,
+    "currentSick": 461,
+    "grade": 6.37
+  },
+  {
+    "name": "Gedera",
+    "newCasesPer10k": 1.6,
+    "positivityPercent": 7.1,
+    "changeRate": 17.3,
+    "currentSick": 3512,
+    "grade": 7.4
+  },
+  {
+    "name": "RamatHaSharon",
+    "newCasesPer10k": 7.7,
+    "positivityPercent": 8.8,
+    "changeRate": 4.4,
+    "currentSick": 4427,
+    "grade": 8.08
+  },
+  {
+    "name": "MevaseretZion",
+    "newCasesPer10k": 5.3,
+    "positivityPercent": 13.5,
+    "changeRate": 0.9,
+    "currentSick": 1084,
+    "grade": 6.71
+  },
+  {
+    "name": "Harish",
+    "newCasesPer10k": 1.0,
+    "positivityPercent": 3.0,
+    "changeRate": 10.5,
+    "currentSick": 1416,
+    "grade": 3.87
+  },
+  {
+    "name": "KiryatBialik",
+    "newCasesPer10k": 7.6,
+    "positivityPercent": 3.4,
+    "changeRate": -5.5,
+    "currentSick": 388,
+    "grade": 3.09
+  },
+  {
+    "name": "KiryatMalakhi",
+    "newCasesPer10k": 7.1,
+    "positivityPercent": 1.9,
+    "changeRate": 14.9,
+    "currentSick": 4336,
+    "grade": 7.84
+  },
+  {
+    "name": "KiryatArba",
+    "newCasesPer10k": 2.4,
+    "positivityPercent": 13.0,
+    "changeRate": -5.9,
+    "currentSick": 3736,
+    "grade": 4.93
+  },
+  {
+    "name": "KiryatTivon",
+    "newCasesPer10k": 3.6,
+    "positivityPercent": 10.2,
+    "changeRate": 13.9,
+    "currentSick": 2322,
+    "grade": 8.05
+  },
+  {
+    "name": "GivatShmuel",
+    "newCasesPer10k": 9.4,
+    "positivityPercent": 14.3,
+    "changeRate": -5.0,
+    "currentSick": 1323,
+    "grade": 7.49
+  },
+  {
+    "name": "NofHaGalil",
+    "newCasesPer10k": 1.2,
+    "positivityPercent": 4.6,
+    "changeRate": -5.4,
+    "currentSick": 4735,
+    "grade": 2.36
+  },
+  {
+    "name": "ZichronYaakov",
+    "newCasesPer10k": 7.4,
+    "positivityPercent": 1.4,
+    "changeRate": 11.8,
+    "currentSick": 1159,
+    "grade": 6.13
+  },
+  {
+    "name": "EvenYehuda",
+    "newCasesPer10k": 1.3,
+    "positivityPercent": 12.0,
+    "changeRate": 0.0,
+    "currentSick": 4338,
+    "grade": 5.57
+  },
+  {
+    "name": "Mazraa",
+    "newCasesPer10k": 2.8,
+    "positivityPercent": 11.4,
+    "changeRate": -4.4,
+    "currentSick": 2995,
+    "grade": 4.66
+  },
+  {
+    "name": "Migdal",
+    "newCasesPer10k": 7.7,
+    "positivityPercent": 7.6,
+    "changeRate": -4.3,
+    "currentSick": 1086,
+    "grade": 4.86
+  },
+  {
+    "name": "NeveMonosson",
+    "newCasesPer10k": 5.0,
+    "positivityPercent": 5.0,
+    "changeRate": -3.1,
+    "currentSick": 4388,
+    "grade": 4.34
+  },
+  {
+    "name": "Shoham",
+    "newCasesPer10k": 5.2,
+    "positivityPercent": 2.0,
+    "changeRate": 1.3,
+    "currentSick": 1865,
+    "grade": 3.56
+  },
+  {
+    "name": "Lehavim",
+    "newCasesPer10k": 4.6,
+    "positivityPercent": 2.7,
+    "changeRate": -5.2,
+    "currentSick": 1431,
+    "grade": 2.09
+  }
+]

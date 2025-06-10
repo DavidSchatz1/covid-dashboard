@@ -1,0 +1,14 @@
+@import 'variables';
+
+.testing-container{
+    margin: 10px 20px 0;
+  padding-inline-start: 15px;
+  padding-bottom: 30px ;
+  border-bottom: 1px solid $border-color;
+
+  .title{
+    font-size: $font-size-lg;
+    font-weight: 700;
+    display: inline-block;
+  }
+}

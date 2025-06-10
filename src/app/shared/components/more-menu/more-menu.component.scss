@@ -1,0 +1,49 @@
+@import 'variables';
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dots {
+  cursor: pointer;
+  user-select: none;
+  padding: 15px 10px 10px 10px;
+  
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  inset-inline-start: -110px;
+  background: var(--card-background);
+  color: var(text-color);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: $box-shadow;
+  width: 140px;
+  z-index: 100;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 400;
+  
+
+  &:hover {
+    background-color: var(--more-hover-color);
+  }
+  .icon{
+    border: 1px solid rgb(176, 176, 176);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    padding: 4px;
+  }
+}
+

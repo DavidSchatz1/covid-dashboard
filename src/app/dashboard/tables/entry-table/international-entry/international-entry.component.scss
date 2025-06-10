@@ -1,0 +1,123 @@
+@import 'variables';
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title1section{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  h3{
+    display: inline-block;
+  }
+}
+
+.international-entries-table-container {
+  padding: 20px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: $box-shadow-sm;
+
+}
+
+h3 {
+  text-align: start;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.last-update-info {
+  text-align: start;
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.entries-table-wrapper {
+  max-height: 250px;
+  overflow-y: auto; 
+  margin-top: 20px; 
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
+  background-color: var(--background-color); 
+}
+
+.entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-color); // מגיע מהטבלה הישנה
+
+  th, td {
+    text-align: start;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+
+  th {
+    // מאפיינים לכותרות העמודות
+    background-color: var(--more-hover-color); // צבע רקע מכותרות הטבלה הישנה
+    cursor: pointer;
+    user-select: none;
+    position: sticky;
+    top: -1px; // קיזוז קל למעלה כדי שלא יסתיר את הגבול
+    z-index: 1; // וודא שהכותרות מעל תוכן הטבלה בגלילה
+    // הסרתי את white-space: nowrap כי זה נפוץ יותר בטבלאות צרות.
+    // אם הכותרות נשברות באופן לא רצוי, ניתן להוסיף שוב.
+  }
+
+  td {
+    background-color: var(--background-color); 
+  }
+
+  .sort-arrow {
+    margin: 5px 0;
+    font-size: 12px;
+    color: $arrow-blue;
+  }
+  .risk-cell {
+    text-align: center; 
+  }
+}
+
+.risk-color-box {
+    height: 15px;
+    width: 15px;  
+    display: inline-block; 
+    border-radius: 3px;
+}
+
+  .risk-red {
+    background-color: #c62828; // אדום כהה
+  }
+
+  .risk-yellow {
+    background-color: #f9a825; // צהוב-כתום כהה
+  }
+
+  .risk-green {
+    background-color: #388e3c; // ירוק כהה
+  }
+
+.risk-legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.risk-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.risk-box {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+}
+

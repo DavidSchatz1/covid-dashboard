@@ -1,0 +1,37 @@
+@import 'variables';
+
+app-key-data {
+  display: contents;
+}
+.key-data-container{
+  margin: 10px 20px 0;
+  padding-inline-start: 15px;
+  padding-bottom: 30px ;
+  border-bottom: 1px solid $border-color;
+  .chart-card{
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    max-width: 600px;
+  }
+  .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title1section{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+  }
+  h3{
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+    font-size: $font-size-base;
+  }
+}
+}
+

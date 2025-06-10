@@ -1,0 +1,53 @@
+<app-hospital-filter
+  [hospitalNames]="allHospitalNames"
+  (selectionChanged)="onFilterChanged($event)">
+</app-hospital-filter>
+<div class="last-update">
+  ⓘ
+  {{hospitalTableFields.LastUpdate| LanguagesPipe}}
+</div>
+<div class="occupancy-table-wrapper">
+  <table class="occupancy-table">
+    <thead>
+      <tr>
+        <th (click)="sortBy('nameKey')">
+          {{hospitalTableFields.Hospital | LanguagesPipe}}<span class="sort-arrow">{{ getSortSymbol('nameKey') }}</span>
+        </th>
+        <th (click)="sortBy('generalOccupancy')">
+          {{hospitalTableFields.GeneralOccupancy | LanguagesPipe}}<span class="sort-arrow">{{ getSortSymbol('generalOccupancy') }}</span>
+        </th>
+        <th (click)="sortBy('internalWardOccupancy')">
+          {{hospitalTableFields.InternalWardOccupancy | LanguagesPipe}}<span class="sort-arrow">{{ getSortSymbol('internalWardOccupancy') }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr *ngFor="let hospital of visibleHospitals">
+    <td>{{ hospital.nameKey | LanguagesPipe }}</td>
+
+    <td>
+      <div class="bar-container">
+        <div class="bar-fill"
+             [ngStyle]="{
+               width: getBarWidth(hospital.generalOccupancy),
+               backgroundColor: getBarColor(hospital.generalOccupancy)
+             }"></div>
+      </div>
+      {{ hospital.generalOccupancy }}%
+    </td>
+
+    <td>
+      <div class="bar-container">
+        <div class="bar-fill"
+             [ngStyle]="{
+               width: getBarWidth(hospital.internalWardOccupancy),
+               backgroundColor: getBarColor(hospital.internalWardOccupancy)
+             }"></div>
+      </div>
+      {{ hospital.internalWardOccupancy }}%
+    </td>
+  </tr>
+</tbody>
+
+  </table>
+</div>

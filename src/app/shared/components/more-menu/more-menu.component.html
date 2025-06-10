@@ -1,0 +1,16 @@
+<div class="menu-container">
+  <div class="dots" (click)="toggleMenu()">
+    <span class="material-icons">more_vert</span>
+  </div>
+
+  <div class="menu" *ngIf="isOpen">
+    <div class="menu-item" (click)="closeMenu()">
+      <img class ="icon" [src]="isDarkMode ? 'assets/images/download-dark-mode.png' : 'assets/images/download-icon.svg'" />
+      <span>{{sharedFields.Download| LanguagesPipe}}</span>
+    </div>
+    <div class="menu-item" (click)="closeMenu()">
+      <img class ="icon" [src]="isDarkMode ? 'assets/images/share-dark-mode.png' : 'assets/images/share-icon.svg'" />
+      <span>{{sharedFields.Share | LanguagesPipe}}</span>
+    </div>
+  </div>
+</div>

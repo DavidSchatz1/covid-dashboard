@@ -1,0 +1,76 @@
+// _variables.scss
+:root {
+  --background-color: #ffffff;
+  --text-color: #233333;
+  --primary-color: #007bff;
+  --grey-background: #f8fafd;
+  --card-background: #ffffff;
+  --more-hover-color: #e6f1f4;  
+}
+
+body.dark-mode {
+  --background-color: #4b6170;
+  --text-color: #eeeeee;
+  --primary-color: #1e90ff;
+  --grey-background: #4b6170;
+  --card-background: #374f60;
+  --more-hover-color: #2a3b47;
+
+}
+
+// 🎨 Colors
+$primary-color: #2a3b47;        // Primary dark-grey
+$secondary-color: #6c757d;      // Secondary grey
+$success-color: #28a745;        // Success green
+$danger-color: #dc3545;         // Danger red
+$warning-color: #ffc107;        // Warning yellow
+$info-color: #17a2b8;           // Info cyan
+$light-color: #f8f9fa;          // Light background
+$dark-color: #343a40;           // Dark background
+$body-bg: #ffffff;              // Main background color
+$text-color: #233333;           // Main text color
+$muted-text-color: #6c757d;     // Muted text
+$outline-basic-border-color: #e4e9f2;
+$grey-background: #EEF1F6;
+$arrow-blue: #5EA5F9;
+$border-color: rgb(232, 232, 232);
+
+// 🎨 Brand-specific
+$brand-color: #4caf50;          // Example brand color (adjust to your project!)
+
+
+// 🖋️ Font Sizes
+$font-size-xs: 0.75rem;         // Extra small
+$font-size-sm: 0.875rem;        // Small
+$font-size-base: 1rem;          // Base size (default)
+$font-size-lg: 1.25rem;         // Large
+$font-size-xl: 1.5rem;          // Extra large
+$font-size-xxl: 2rem;           // 2x Extra large
+
+// 🖋️ Font Family
+$font-family-base: 'open sans', sans-serif;
+
+// 🔲 Spacing
+$spacer: 1rem;                  // Base spacing
+$spacer-half: calc($spacer / 2);
+$spacer-quarter:calc($spacer / 4);
+
+// 🎨 Border Radius
+$border-radius: 0.25rem;        // Standard border radius
+$border-radius-lg: 0.5rem;      // Large border radius
+
+// 🎨 Box Shadow
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+// 🎨 Transition
+$transition-speed: 0.3s;        // Base transition speed
+
+// 🟡 Z-Index
+$z-index-navbar: 1000;
+$z-index-modal: 1050;
+
+// 🌟 Container Width
+$container-max-width: 1200px;
+

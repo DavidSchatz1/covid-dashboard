@@ -1,0 +1,58 @@
+
+<div class="international-entries-table-container">
+  <div class="title">
+    <div class="title1section">
+      <h3>{{ internationalEntryFields.TableTitle| LanguagesPipe }}</h3>
+      <app-info-icon [infoText]="internationalEntryFields.TableInfo | LanguagesPipe"></app-info-icon>
+    </div>
+    <app-more-menu></app-more-menu>
+  </div>
+  <div class="last-update-info">
+    {{ internationalEntryFields.lastUpdate | LanguagesPipe }} <span>{{ internationalEntryFields.EntirePeriod | LanguagesPipe }}</span>
+  </div>
+  <app-entry-filter
+    [countryNames]="allCountryNames"
+    (selectionChanged)="onFilterChanged($event)"
+    (timeRangeChanged)="onTimeRangeChanged($event)">
+  </app-entry-filter>
+  <div class="risk-legend">
+  <div class="risk-item">
+    <span>סיכון גבוה</span>
+    <div class="risk-box risk-red"></div>
+  </div>
+  <div class="risk-item">
+    <span>סיכון בינוני</span>
+    <div class="risk-box risk-yellow"></div>
+  </div>
+  <div class="risk-item">
+    <span>סיכון נמוך</span>
+    <div class="risk-box risk-green"></div>
+  </div>
+</div>
+
+
+<div class="entries-table-wrapper">
+  <table class="entries-table">
+    <thead>
+      <tr>
+        <th *ngFor="let col of tableColumns" (click)="sortBy(col.field)">
+          {{ col.headerKey | LanguagesPipe }}
+          <span class="sort-arrow">{{ getSortSymbol(col.field) }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of visibleEntries">
+        <td>{{ entry.country | LanguagesPipe }}</td>
+        <td>{{ entry.incoming }}</td>
+        <td>{{ entry.verifiedCitizens }}</td>
+        <td>{{ entry.verifiedForeigners }}</td>
+        <td>{{ getPercentageText(entry.percentageVerified) }}</td>
+        <td class="risk-cell"> <div class="risk-color-box" [ngClass]="getRiskColorClass(entry.riskColor)"></div>
+  </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
+</div>

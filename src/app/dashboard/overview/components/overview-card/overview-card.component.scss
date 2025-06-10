@@ -1,0 +1,42 @@
+@import 'variables';
+
+
+
+.card{
+  padding: 1rem;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow:  $box-shadow-sm;
+  min-width: 150px;
+  max-width: 1fr;
+  height: 182px;
+
+  h3{
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        font-size: $font-size-base;
+      }
+      .main-value{
+        font-size: 22.4px;
+        font-weight: 700;
+        padding: 0;
+        margin: 0 0 8px;
+      }
+      .number-value{
+        font-weight: 700;
+        padding-inline-end: 15px;
+
+      }
+      .number-value-big{
+        font-weight: 700;
+        font-size: $font-size-lg;
+        padding-inline-start: 30px;
+        line-height: 1.75rem;
+      }
+}
+.line{
+  display: block;
+  
+}
+

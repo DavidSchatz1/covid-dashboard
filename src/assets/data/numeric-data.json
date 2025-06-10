@@ -1,0 +1,35 @@
+{
+  "confirmed": {
+    "yesterday": 2,
+    "since_midnight": 0,
+    "total": 4860604
+  },
+  "active": {
+    "current": 368,
+    "hospitalized": 169
+  },
+  "vaccinations": {
+    "dose1": 6725492,
+    "dose2": 6148759,
+    "dose3": 4475775,
+    "dose4": 838902,
+    "omicron": 407546
+  },
+  "deceased": {
+    "total": 13171
+  },
+  "tests": {
+    "positive_rate": 1.96,
+    "virus_detection_tests": 102,
+    "total_tests": 109
+  },
+  "last7days":{
+    "ConfirmedCases": 49,
+    "confirmedPercent": 32.4,
+    "deaths": 0,
+    "deathspercent": 0,
+    "tests":2104,
+    "testsPercent": 1,
+    "positiveResults": 2.3
+  }
+}

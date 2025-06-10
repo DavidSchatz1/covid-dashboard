@@ -1,0 +1,33 @@
+<div class="filter-container">
+  <div class="filter-header" (click)="toggleDropdown()">
+    <div *ngIf="currenLabel">
+      {{ currenLabel | LanguagesPipe }}
+    </div>
+    <div *ngIf="!currenLabel">
+      {{ cityHealthColorsFields.allCities| LanguagesPipe }}
+    </div>
+      <span class="arrow" [class.open]="isOpen"></span>
+  </div>
+
+  <div class="filter-dropdown" *ngIf="isOpen">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="{{ cityHealthColorsFields.SearchForCity| LanguagesPipe }}" />
+
+    <ul class="city-list">
+      <li *ngFor="let city of filteredCities" 
+          (click)="selectCity(city.name)"
+          [class.selected]="city.name === selectedCity">
+        {{ city.name | LanguagesPipe }}
+      </li>
+    </ul>
+
+
+    <div class="filter-buttons">
+      <button (click)="applyFilter()">
+      {{ cityHealthColorsFields.Save| LanguagesPipe }}
+      </button>
+      <button (click)="cancelFilter()">
+      {{ cityHealthColorsFields.Cancel| LanguagesPipe }}
+      </button>
+    </div>
+  </div>
+</div>

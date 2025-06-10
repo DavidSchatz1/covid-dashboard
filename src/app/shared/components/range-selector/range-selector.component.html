@@ -1,0 +1,33 @@
+<div class="range-selector">
+  <!-- Selector header -->
+  <div class="selector-header" (click)="toggleSelector($event)">
+    {{ getLabelForValue(currentRange) }}
+    <span class="arrow" [class.open]="selectorOpen">&#9662;</span>
+  </div>
+
+  <!-- Options -->
+  <div class="options-container" *ngIf="selectorOpen">
+    <div class="options-container-header">
+      {{deathsField.Period| LanguagesPipe}}
+    </div>
+    <div
+      *ngFor="let option of rangeOptions"
+      class="range-option"
+      (click)="selectTempRange(option.value, $event)"
+    >
+      <span
+        class="check-circle"
+        [class.checked]="tempRange === option.value"
+      ></span>
+      <div class="option-text">
+        {{ option.label }}
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="selector-actions">
+      <button (click)="cancelTempRange($event)">{{deathsField.Cancel | LanguagesPipe}}</button>
+      <button (click)="applyTempRange($event)"> {{deathsField.OK| LanguagesPipe}} </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="sidenav" [class.expanded]="isExpanded" dir="rtl">
+  <button class="toggle-btn" (click)="toggleExpand()">
+    <span [innerHTML]="isExpanded ? '&#x2039;' : '&#x203A;'"></span>
+  </button>
+
+  <div class="content">
+    <div class="section main-link">
+      <span class="icon" *ngIf="isExpanded">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="var(--text-color)">
+        <g clip-path="url(#clip0_25021_4557)">
+          <path d="M15.6247 7.48571L9.95933 1.35722C9.45457 0.81074 8.74468 0.5 8.001 0.5C7.25732 0.5 6.54743 0.81074 6.04267 1.35722L0.387333 7.48371C0.139142 7.73374 -0.00010367 8.07188 5.7911e-08 8.42429V14.4988C5.7911e-08 15.604 0.895431 16.5 2 16.5H4.66667V12.4975C4.67122 11.2769 5.34374 10.1568 6.41867 9.57968C6.452 9.561 6.48533 9.54233 6.52 9.52431C6.64447 9.46227 6.77273 9.40813 6.904 9.36221C6.994 9.32953 7.08533 9.30151 7.17933 9.27683C7.27333 9.25214 7.38667 9.23013 7.49333 9.21012C7.552 9.20078 7.60667 9.18077 7.66667 9.17476C7.76933 9.16476 7.86667 9.16276 7.97 9.16209C7.98067 9.16209 7.99 9.15875 8 9.15875H8.012C8.21837 9.16035 8.42414 9.18112 8.62667 9.22079C8.64933 9.22546 8.672 9.22746 8.69333 9.23213C8.88336 9.27365 9.0694 9.33169 9.24933 9.40557C9.27467 9.41558 9.3 9.42492 9.32533 9.43626C9.49748 9.51101 9.66297 9.60028 9.82 9.70309L9.894 9.75246C10.0464 9.85847 10.1898 9.97695 10.3227 10.1067C10.344 10.1274 10.364 10.148 10.3847 10.1694C10.5148 10.3031 10.6339 10.4473 10.7407 10.6003L10.786 10.667C10.8909 10.8265 10.9821 10.9945 11.0587 11.1693C11.0673 11.1907 11.0747 11.212 11.0833 11.236C11.1595 11.4204 11.2189 11.6113 11.2607 11.8064C11.2607 11.8211 11.2653 11.8364 11.268 11.8511C11.3109 12.0639 11.3327 12.2804 11.3333 12.4975V16.5H14C15.1046 16.5 16 15.604 16 14.4988V8.41429C16.0002 8.06773 15.8656 7.73471 15.6247 7.48571Z" fill="var(--text-color)"></path>
+          <path d="M8 10.4961C6.89543 10.4961 6 11.3921 6 12.4973V16.4998H10V12.4973C10 11.3921 9.10457 10.4961 8 10.4961Z" fill="var(--text-color)"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_25021_4557">
+            <rect width="16" height="16" fill="white" transform="translate(0 0.5)"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+
+      
+      </span>
+      <span class="label" *ngIf="isExpanded">{{SideMenuFields.DataWorld | LanguagesPipe}}</span>
+      <span class="chevron" *ngIf="isExpanded &&!isDataMenuOpen"  (click)="toggleDataMenu()">
+        {{'&#x203A;' }}
+      </span>
+      <span style="padding-bottom: 8px;" class="chevron" *ngIf="isDataMenuOpen" (click)="toggleDataMenu()">
+          <svg _ngcontent-huy-c84="" xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none"><path _ngcontent-huy-c84="" d="M1 1L4 4L7 1" stroke="#233333" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </div>
+
+    <div class="submenu" *ngIf="isExpanded && isDataMenuOpen">
+      <div class="submenu-item">{{SideMenuFields.WarCasualties | LanguagesPipe}}</div>
+      <div class="submenu-item">{{SideMenuFields.HMOInsured| LanguagesPipe}}</div>
+      <div class="submenu-item">{{SideMenuFields.ChildDevelopment | LanguagesPipe}}</div>
+      <div class="submenu-item">{{SideMenuFields.Beaches | LanguagesPipe}}</div>
+      <div class="submenu-item">{{SideMenuFields.ChildGrowth | LanguagesPipe}}</div>
+      <div class="submenu-item">{{SideMenuFields.HealthCareQuality | LanguagesPipe}}</div>
+      <div class="submenu-item" style="color: #0068f5; font-weight: 700;">{{SideMenuFields.COVID19 | LanguagesPipe}}</div>
+    </div>
+
+    <hr *ngIf="isExpanded" />
+
+    <div class="footer-links" *ngIf="isExpanded">
+      <div class="footer-item">{{SideMenuFields.AboutDashboard | LanguagesPipe}}</div>
+      <div class="footer-item">{{SideMenuFields.Accessibility | LanguagesPipe}}</div>
+      <div class="footer-item">{{SideMenuFields.TermsOfUse | LanguagesPipe}}</div>
+    </div>
+  </div>
+</div>
