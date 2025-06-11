@@ -1,7 +1,5 @@
-@import 'variables';
-.reinfection-container{
-  margin: 10px 20px 0;
-  padding-inline-start: 15px;
-  padding-bottom: 30px ;
-  border-bottom: 1px solid $border-color;
+@import "variables";
+@import "mixins";
+.reinfection-container {
+  @include section-styles();
 }

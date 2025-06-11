@@ -308,6 +308,10 @@
     "colorProgramInfo": "This table displays COVID-19 data by city in Israel, including active cases, test positivity rate, and other indicators. You can sort and filter the cities as needed.",
     "save": "Save",
     "cancel": "Cancel",
-    "searchForCity": "Search for City..."
+    "searchForCity": "Search for City...",
+    "redExplanation": "lower than 3",
+    "orangeExplanation": "between 3 and 5",
+    "yellowExplanation": "between 5 and 7",
+    "greenExplanation": "higher than 7.5"
   }
 }

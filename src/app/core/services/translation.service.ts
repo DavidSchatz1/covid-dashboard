@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+type language = 'he' | 'en';
 @Injectable({ providedIn: 'root' })
 export class TranslationService {
   private language = new BehaviorSubject<string>('he');
@@ -15,7 +16,7 @@ export class TranslationService {
   }
 
 
-  switchLanguage(lang: 'he' | 'en') {
+  switchLanguage(lang: language) {
     this.language.next(lang);
     this.loadTranslations(lang);
 
@@ -26,14 +27,12 @@ export class TranslationService {
     document.documentElement.classList.toggle('ltr', lang === 'en');
   }
 
-  private loadTranslations(lang: string) {
+  private loadTranslations(lang: language) {
     this.http.get(`/assets/textLanguages/${lang}.json`).subscribe(data => {
       this.translations.next(data);
     });
   }
 
-  //i changed the fall back to ""
-  // גרסה סינכרונית (שימושית בקוד TypeScript)
   getTranslation(key: string): string {
     const keys = key.split('.');
     let result = this.translations.getValue();
@@ -44,7 +43,7 @@ export class TranslationService {
     return result;
   }
 
-  // גרסה ריאקטיבית (שימושית ב־Pipe)
+  // reactive version - usefull in LanguagePipe
   getTranslation$(key: string): Observable<string> {
     return this.translations.asObservable().pipe(
       map(translations => {

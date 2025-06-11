@@ -1,50 +1,50 @@
 <div class="container">
-  <h1>{{ OverviewField.Last7Days | LanguagesPipe }}</h1>
+  <h1>{{ OverviewFields.Last7Days | LanguagesPipe }}</h1>
   <div class="cards-container">
     <div class="card">
-      <h3> {{ OverviewField.ConfirmedCases| LanguagesPipe }} </h3>
-      <app-info-icon [infoText]="OverviewField.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
+      <h3> {{ OverviewFields.ConfirmedCases| LanguagesPipe }} </h3>
+      <app-info-icon [infoText]="OverviewFields.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
       <p class="main-value">
-        {{ NumericField.last7daysConfirmedCases | NumericDataPipe }}
+        {{ NumericFields.last7daysConfirmedCases | NumericDataPipe }}
       </p>
       <small>
         <span class="number-value">
-        %{{ NumericField.last7daysConfirmedPercent| NumericDataPipe }}+
+        %{{ NumericFields.last7daysConfirmedPercent| NumericDataPipe }}+
         </span>
-        {{ OverviewField.Prior7Days | LanguagesPipe }}
+        {{ OverviewFields.Prior7Days | LanguagesPipe }}
       </small>
     </div>
     <div class="card">
-      <h3> {{ OverviewField.Deaths| LanguagesPipe }} </h3>
-      <app-info-icon [infoText]="OverviewField.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
+      <h3> {{ OverviewFields.Deaths| LanguagesPipe }} </h3>
+      <app-info-icon [infoText]="OverviewFields.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
       <p class="main-value">
-        {{ NumericField.last7daysDeaths| NumericDataPipe }}
+        {{ NumericFields.last7daysDeaths| NumericDataPipe }}
       </p>
       <small>
         <span class="number-value">
-          %{{ NumericField.last7daysDeathsPercent| NumericDataPipe }}
+          %{{ NumericFields.last7daysDeathsPercent| NumericDataPipe }}
         </span>
-        {{ OverviewField.Prior7Days | LanguagesPipe }}
+        {{ OverviewFields.Prior7Days | LanguagesPipe }}
       </small>
     </div>
     <div class="card">
-      <h3> {{ OverviewField.Tests| LanguagesPipe }} </h3>
-      <app-info-icon [infoText]="OverviewField.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
+      <h3> {{ OverviewFields.Tests| LanguagesPipe }} </h3>
+      <app-info-icon [infoText]="OverviewFields.ConfirmedCasesInfo | LanguagesPipe"></app-info-icon>
       <p class="main-value">
-        {{ NumericField.last7daysTests| NumericDataPipe }}
+        {{ NumericFields.last7daysTests| NumericDataPipe }}
       </p>
       <small>
         <span class="number-value">
-           +{{ NumericField.last7daysTestsPercent| NumericDataPipe }}%
+           +{{ NumericFields.last7daysTestsPercent| NumericDataPipe }}%
         </span>
-        {{ OverviewField.Prior7Days | LanguagesPipe }}
+        {{ OverviewFields.Prior7Days | LanguagesPipe }}
       </small>
       <br>
       <small>
         <span class="number-value">
-          {{NumericField.last7daysPositiveResults| NumericDataPipe }}%
+          {{NumericFields.last7daysPositiveResults| NumericDataPipe }}%
         </span>
-        {{ OverviewField.PositiveResults| LanguagesPipe }}
+        {{ OverviewFields.PositiveResults| LanguagesPipe }}
       </small>
     </div>
   </div>

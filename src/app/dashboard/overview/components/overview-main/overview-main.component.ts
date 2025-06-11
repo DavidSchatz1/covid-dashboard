@@ -1,17 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { OverviewField } from 'src/assets/data/keys/overview-data.keys';
+import { Component} from '@angular/core';
+import { OverviewFields } from 'src/assets/data/keys/overview-data.keys';
 
 @Component({
   selector: 'app-overview-main',
   templateUrl: './overview-main.component.html',
   styleUrls: ['./overview-main.component.scss']
 })
-export class OverviewMainComponent implements OnInit {
+export class OverviewMainComponent {
 
-  OverviewField = OverviewField;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  OverviewFields = OverviewFields;
 
 }

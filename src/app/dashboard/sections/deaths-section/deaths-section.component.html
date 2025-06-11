@@ -1,12 +1,12 @@
 
 <div class="deathsChart-container">
-  <p class="subtitle">{{ deathsField.Title | LanguagesPipe }}</p>
+  <p class="subtitle">{{ deathsFields.Title | LanguagesPipe }}</p>
   
   <div class="chart-card">
     <div class="title">
     <div class="title1section">
-      <p class="subtitle">{{ deathsField.DeathsDaily| LanguagesPipe }}</p>
-      <app-info-icon [infoText]="deathsField.DeathsExplanation | LanguagesPipe"></app-info-icon>
+      <p class="subtitle">{{ deathsFields.DeathsDaily| LanguagesPipe }}</p>
+      <app-info-icon [infoText]="deathsFields.DeathsExplanation | LanguagesPipe"></app-info-icon>
     </div>
     <app-more-menu></app-more-menu>
   </div>

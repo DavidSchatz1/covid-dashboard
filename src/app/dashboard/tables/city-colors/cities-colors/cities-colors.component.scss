@@ -1,9 +1,19 @@
-.green-bg { background-color: #c8e6c9; }
-.yellow-bg { background-color: #fff9c4; }
-.orange-bg { background-color: #ffe0b2; }
-.red-bg { background-color: #ffcdd2; }
+@import "variables";
+@import "mixins";
 
-@import 'variables';
+.green-bg {
+  background-color: var(--green-bg);
+}
+.yellow-bg {
+  background-color: var(--yellow-bg);
+}
+.orange-bg {
+  background-color: var(--orange-bg);
+}
+.red-bg {
+  background-color: var(--red-bg);
+}
+
 .occupancy-table-wrapper {
   max-height: 150px;
   overflow-y: auto;
@@ -14,11 +24,12 @@
   border-collapse: collapse;
   color: var(--text-color);
 
-  th, td {
-    text-align: right;
+  th,
+  td {
+    text-align: start;
     padding: 8px 12px;
-    border: 1px solid #ddd;
-    font-size: 14px;
+    border: 1px solid $border-color;
+    font-size: $font-size-sm;
   }
 
   th {
@@ -39,21 +50,81 @@
     font-size: 12px;
     color: $arrow-blue;
   }
+
+  .grade-cell {
+    text-align: center;
+
+    .grade-color-box {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      text-decoration: underline;
+      width: 30px;
+      height: 22px;
+      border-radius: 3px;
+    }
+  }
 }
 
-.title{
+.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .title1section{
+  .title1section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  h3{
+  h3 {
     display: inline-block;
   }
 }
 
+.last-update {
+  @include last-update();
+}
 
+.risk-legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .risk-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+
+    .risk-explanation-box {
+      display: flex;
+      flex-direction: column;
+      padding: 0 5px;
+
+      .risk-explanation {
+        font-size: $font-size-xs;
+        color: gray;
+      }
+    }
+
+    .risk-box {
+      width: 15px;
+      height: 15px;
+      border-radius: 3px;
+    }
+    .risk-red {
+      background-color: #c62828;
+    }
+    .risk-orange {
+      background-color: #f57c00;
+    }
+    .risk-yellow {
+      background-color: #ebeb03;
+    }
+    .risk-green {
+      background-color: #388e3c;
+    }
+  }
+}

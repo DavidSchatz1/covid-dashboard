@@ -1,18 +1,18 @@
-@import 'variables';
+@import "variables";
 app-seven-day-summary {
   display: contents;
 }
-h1{
+h1 {
   padding: 0;
   margin: 10px;
   display: block;
   font-size: $font-size-base;
 }
-.line{
+.line {
   display: block;
   font-size: $font-size-sm;
 }
-.container{
+.container {
   background-color: var(--card-background);
   color: var(--text-color);
   width: calc(100% - 60px);
@@ -20,33 +20,31 @@ h1{
   padding: 2px 20px;
   box-shadow: $box-shadow;
 
-
-  .cards-container{
+  .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    // width: 100%;
     margin-bottom: 20px;
     padding-inline-end: 20%;
 
-    .card{
+    .card {
       padding: 1rem;
       border-radius: 10px;
-      box-shadow:  $box-shadow;
+      box-shadow: $box-shadow;
       width: auto;
-      
-      h3{
+
+      h3 {
         padding: 0;
         margin: 0;
         display: inline-block;
       }
-      .main-value{
+      .main-value {
         font-size: $font-size-lg;
         font-weight: 700;
         padding: 0;
         margin: 0 0 8px;
       }
-      .number-value{
+      .number-value {
         font-weight: 700;
       }
     }

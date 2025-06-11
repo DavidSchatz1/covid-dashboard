@@ -1,4 +1,4 @@
-export enum OverviewField {
+export enum OverviewFields {
   Title = 'title',
   NewCases = 'newCases',
   SinceMidnight = 'sinceMidnight',

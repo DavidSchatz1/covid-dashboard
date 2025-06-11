@@ -1,4 +1,4 @@
-export enum deathsField {
+export enum deathsFields {
   Title = 'DeathsTitle',
   DeathsDaily = 'deathsDaily',
   DeathsExplanation = 'deathsExplanation',

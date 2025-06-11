@@ -3,6 +3,8 @@
     {{ timeRangeTranslationKey | LanguagesPipe }},
 
     {{ selectedCountries.length }} {{ InternationalEntryFields.countrysChosen | LanguagesPipe }}
+
+    <span class="arrow" [class.open]="isDropdownOpen">&#x203A;</span>
   </div>
 
   <div class="dropdown-panel" *ngIf="isDropdownOpen">

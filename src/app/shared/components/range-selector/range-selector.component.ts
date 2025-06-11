@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, ElementRef, HostListener } from '@angular/core';
-import { deathsField } from 'src/assets/data/keys/deaths.keys';
+import { deathsFields } from 'src/assets/data/keys/deaths.keys';
 
 @Component({
   selector: 'app-range-selector',
@@ -14,7 +14,7 @@ export class RangeSelectorComponent {
 
   selectorOpen = false;
   tempRange: string = '';
-  deathsField = deathsField;
+  deathsFields = deathsFields;
 
   constructor(private eRef: ElementRef) {}
 

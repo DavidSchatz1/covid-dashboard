@@ -1,25 +1,27 @@
-@import 'variables';
-.deathsChart-container{
+@import "variables";
+@import "mixins";
+.deathsChart-container {
   color: var(--text-color);
-  margin: 10px 20px 0;
-  padding-inline-start: 15px;
-  padding-bottom: 30px ;
-  border-bottom: 1px solid $border-color;
+  max-width: 600px;
+  @include section-styles();
 
-  .title{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .title1section{
+  .title {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
 
+    p {
+      margin: 0;
+      font-size: $font-size-base;
+    }
+
+    .title1section {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h3 {
+      display: inline-block;
+    }
   }
-  h3{
-    display: inline-block;
-  }
-  
-}
 }

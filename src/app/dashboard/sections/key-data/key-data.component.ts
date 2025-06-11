@@ -42,7 +42,6 @@ export class KeyDataComponent implements OnInit, OnDestroy {
   buildChartOptions(): void {
     const textAlign = getComputedStyle(document.body).direction === 'rtl' ? 'right' : 'left';
     const textColor = this.getCssVariable('--text-color');
-    const bgColor = this.getCssVariable('--card-background');
 
     this.option = {
       textStyle: {

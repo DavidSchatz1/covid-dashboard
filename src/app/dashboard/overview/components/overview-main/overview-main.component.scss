@@ -1,4 +1,5 @@
-@import 'variables';
+@import "variables";
+@import "mixins";
 
 app-overview-card {
   display: contents;
@@ -8,33 +9,29 @@ app-seven-day-summary {
   display: contents;
 }
 
-.overviewContainer{
+.overviewContainer {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   background-color: var(--grey-background);
   color: var(--text-color);
-  margin: 10px 20px 0;
-  padding-inline-start: 15px;
-  padding-bottom: 30px ;
-  border-bottom: 1px solid $border-color;
 
-  .subtitle{
+  @include section-styles();
+
+  .subtitle {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 30px;
     display: inline-block;
   }
-  .overview-cards{
+  .overview-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     width: 100%;
-    gap: 1rem;
     background-color: var(--grey-background);
     color: var(--text-color);
     margin-bottom: 20px;
-    // align-items: stretch;
   }
 }

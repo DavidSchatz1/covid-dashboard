@@ -10,11 +10,16 @@ interface CityHealthData {
   changeRate: number;
   currentSick: number;
   grade: number;
-  translatedName?: string; // נוסיף את זה ידנית מאוחר יותר
+  translatedName?: string;
 }
 
 type SortField = keyof CityHealthData | 'translatedName';
 type SortDirection = 'asc' | 'desc' | null;
+interface ColorItem {
+    cssClass: 'red' | 'orange' | 'yellow' | 'green';
+    fieldKey: 'Red' | 'Orange' | 'Yellow' | 'Green';
+    explanationKey: 'RedExplanation' | 'OrangeExplanation' | 'YellowExplanation' | 'GreenExplanation';
+  }
 
 @Component({
   selector: 'app-cities-colors',
@@ -28,6 +33,13 @@ export class CitiesColorsComponent implements OnInit {
 
   currentSortField: SortField | null = null;
   currentSortDirection: SortDirection = null;
+
+  colors: ColorItem[] = [
+    { cssClass: 'red', fieldKey: 'Red', explanationKey: 'RedExplanation' },
+    { cssClass: 'orange', fieldKey: 'Orange', explanationKey: 'OrangeExplanation' },
+    { cssClass: 'yellow', fieldKey: 'Yellow', explanationKey: 'YellowExplanation' },
+    { cssClass: 'green', fieldKey: 'Green', explanationKey: 'GreenExplanation' },
+  ]
 
   constructor(
     private http: HttpClient,
@@ -50,10 +62,10 @@ export class CitiesColorsComponent implements OnInit {
       this.displayedData = this.cityData.filter(city => filteredCities.includes(city.name));
     }
   }
-
-  getCityLabel(city: string): string {
-    return cityHealthColorsFields[city as keyof typeof cityHealthColorsFields] || city;
-  }
+//כנראה לא עושה כלום! למחיקה, אחרי שנראה שתיבת החיפוש חזרה לעבוד
+  // getCityLabel(city: string): string {
+  //   return cityHealthColorsFields[city as keyof typeof cityHealthColorsFields] || city;
+  // }
 
   getRowColor(grade: number): string {
     if (grade >= 7.5) return 'green-bg';

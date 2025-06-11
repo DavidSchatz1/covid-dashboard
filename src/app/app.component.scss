@@ -3,8 +3,8 @@
 .sections {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto; // מונע גלישה
-  min-width: 0;   // זה הכי חשוב!
+  flex: 1 1 auto;
+  min-width: 0;
   background-color: var(--grey-background);
   color: var(--text-color);
 

@@ -1,4 +1,4 @@
-export enum dataPageHeaderField {
+export enum dataPageHeaderFields {
   Title = 'dpTitle',
   Date = 'dpDate',
 }

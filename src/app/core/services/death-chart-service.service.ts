@@ -17,7 +17,9 @@ export class DeathsChartService {
     values: number[];
     movingAverage: number[];
     yAxisConfig: { min: number; max: number; interval: number } | null;
-  } {
+  } 
+  
+  {
     const allDates = Object.keys(data).sort((a, b) => {
       const [dayA, monthA, yearA] = a.split('-').map(Number);
       const [dayB, monthB, yearB] = b.split('-').map(Number);

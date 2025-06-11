@@ -23,7 +23,7 @@ export class ThemeObserverService {
         attributeFilter: ['class']
       });
 
-      return () => observerInstance.disconnect(); // Clean up on unsubscribe
+      return () => observerInstance.disconnect();
     });
   }
 }

@@ -7,8 +7,8 @@
     </div>
     <app-more-menu></app-more-menu>
   </div>
-  <div class="last-update-info">
-    {{ internationalEntryFields.lastUpdate | LanguagesPipe }} <span>{{ internationalEntryFields.EntirePeriod | LanguagesPipe }}</span>
+  <div class="last-update">ⓘ
+    {{ internationalEntryFields.lastUpdate | LanguagesPipe }} 
   </div>
   <app-entry-filter
     [countryNames]="allCountryNames"
@@ -17,15 +17,15 @@
   </app-entry-filter>
   <div class="risk-legend">
   <div class="risk-item">
-    <span>סיכון גבוה</span>
+    <span>{{internationalEntryFields.dangeraousCountries| LanguagesPipe}}</span>
     <div class="risk-box risk-red"></div>
   </div>
   <div class="risk-item">
-    <span>סיכון בינוני</span>
+    <span>{{internationalEntryFields.mediumDangerCountries| LanguagesPipe}}</span>
     <div class="risk-box risk-yellow"></div>
   </div>
   <div class="risk-item">
-    <span>סיכון נמוך</span>
+    <span>{{internationalEntryFields.lowRiskCountries| LanguagesPipe}}</span>
     <div class="risk-box risk-green"></div>
   </div>
 </div>
@@ -48,7 +48,7 @@
         <td>{{ entry.verifiedCitizens }}</td>
         <td>{{ entry.verifiedForeigners }}</td>
         <td>{{ getPercentageText(entry.percentageVerified) }}</td>
-        <td class="risk-cell"> <div class="risk-color-box" [ngClass]="getRiskColorClass(entry.riskColor)"></div>
+        <td class="risk-cell"> <div class="risk-box" [ngClass]="getRiskColorClass(entry.riskColor)"></div>
   </td>
       </tr>
     </tbody>

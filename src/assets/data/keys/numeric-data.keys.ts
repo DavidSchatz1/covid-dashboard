@@ -1,4 +1,4 @@
-export enum NumericField {
+export enum NumericFields {
   Confirmed = 'confirmed',
   ConfirmedYesterday = 'confirmed.yesterday',
   ConfirmedSinceMidnight = 'confirmed.since_midnight',

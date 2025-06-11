@@ -4,7 +4,7 @@ import {
   OnDestroy,
   ElementRef
 } from '@angular/core';
-import { deathsField } from 'src/assets/data/keys/deaths.keys';
+import { deathsFields } from 'src/assets/data/keys/deaths.keys';
 import * as deathsDataJson from 'src/assets/data/deathsByDate.json';
 import { TranslationService } from 'src/app/core/services/translation.service';
 import { Subscription } from 'rxjs';
@@ -17,13 +17,12 @@ import { ThemeObserverService } from 'src/app/core/services/theme-observer.servi
   styleUrls: ['./deaths-section.component.scss']
 })
 export class DeathsSectionComponent implements OnInit, OnDestroy {
-  deathsField = deathsField;
+  deathsFields = deathsFields;
   currentRange: string = 'lastMonth';
   selectorOpen: boolean = false;
   deathsData: Record<string, number> = deathsDataJson;
   rangeOptions: { label: string; value: string }[] = [];
   private subs = new Subscription();
-  // private translationSub?: Subscription;
 
   dates: string[] = [];
   values: number[] = [];
@@ -35,11 +34,9 @@ export class DeathsSectionComponent implements OnInit, OnDestroy {
   };
 
   constructor(
-    private eRef: ElementRef,
     private translationService: TranslationService,
     private deathsChartService: DeathsChartService,
     private themeObserverService: ThemeObserverService
-
   ) {}
 
   ngOnInit(): void {
@@ -72,11 +69,11 @@ export class DeathsSectionComponent implements OnInit, OnDestroy {
 
   buildRangeOptions(): void {
     this.rangeOptions = [
-      { label: this.translationService.getTranslation(`Deaths.${this.deathsField.Last30Days}`), value: 'lastMonth' },
-      { label: this.translationService.getTranslation(`Deaths.${this.deathsField.Last3Months}`), value: 'last3Months' },
-      { label: this.translationService.getTranslation(`Deaths.${this.deathsField.Last6Months}`), value: 'last6Months' },
-      { label: this.translationService.getTranslation(`Deaths.${this.deathsField.Last1Year}`), value: 'lastYear' },
-      { label: this.translationService.getTranslation(`Deaths.${this.deathsField.EntirePeriod}`), value: 'all' }
+      { label: this.translationService.getTranslation(`Deaths.${this.deathsFields.Last30Days}`), value: 'lastMonth' },
+      { label: this.translationService.getTranslation(`Deaths.${this.deathsFields.Last3Months}`), value: 'last3Months' },
+      { label: this.translationService.getTranslation(`Deaths.${this.deathsFields.Last6Months}`), value: 'last6Months' },
+      { label: this.translationService.getTranslation(`Deaths.${this.deathsFields.Last1Year}`), value: 'lastYear' },
+      { label: this.translationService.getTranslation(`Deaths.${this.deathsFields.EntirePeriod}`), value: 'all' }
     ];
   }
 
@@ -89,10 +86,10 @@ export class DeathsSectionComponent implements OnInit, OnDestroy {
     this.yAxisConfig = chartData.yAxisConfig;
 
     this.translations = {
-      daily: this.translationService.getTranslation(`Deaths.${this.deathsField.DeathsDaily}`),
-      avg: this.translationService.getTranslation(`Deaths.${this.deathsField.SevenDaysAvg}`),
-      date: this.translationService.getTranslation(`Deaths.${this.deathsField.Date}`),
-      deaths: this.translationService.getTranslation(`Deaths.${this.deathsField.NumberOfDeaths}`)
+      daily: this.translationService.getTranslation(`Deaths.${this.deathsFields.DeathsDaily}`),
+      avg: this.translationService.getTranslation(`Deaths.${this.deathsFields.SevenDaysAvg}`),
+      date: this.translationService.getTranslation(`Deaths.${this.deathsFields.Date}`),
+      deaths: this.translationService.getTranslation(`Deaths.${this.deathsFields.NumberOfDeaths}`)
     };
   }
 }

@@ -1,3 +1,5 @@
+@import 'mixins';
+@import 'variables';
 .dropdown-wrapper {
   margin-bottom: 10px;
   position: relative;
@@ -8,28 +10,9 @@
 
 
   .dropdown-toggle {
-    background-color: var(--grey-background);
-    color: var(--text-color);
-    border-radius: 30px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    user-select: none;
-    font-size: 14px;
-    text-align: right;
-    padding: 8px;
-
+    @include dropdown-toggle();
     .arrow {
-      transition: transform 0.2s ease-in-out; 
-      display: inline-block;
-      padding: 0 5px;
-
-    }
-   :host-context([dir="ltr"]) .arrow.open {
-      transform: rotate(90deg);
-    }
-
-    :host-context([dir="rtl"]) .arrow.open {
-      transform: rotate(-90deg);
+      @include arrow();
     }
   }
 
@@ -44,7 +27,7 @@
     max-height: 250px;
     overflow-y: auto;
     margin-top: 10px;
-    z-index: 100;
+    z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -73,5 +56,12 @@
       accent-color: var(--text-color);
     }
     
+  }
+}
+.selector-actions{
+  @include selector-actions();
+
+  button{
+    @include selector-actions-button();
   }
 }

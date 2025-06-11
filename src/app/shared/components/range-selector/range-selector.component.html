@@ -2,13 +2,13 @@
   <!-- Selector header -->
   <div class="selector-header" (click)="toggleSelector($event)">
     {{ getLabelForValue(currentRange) }}
-    <span class="arrow" [class.open]="selectorOpen">&#9662;</span>
+    <span class="arrow" [class.open]="selectorOpen">&#x203A;</span>
   </div>
 
   <!-- Options -->
   <div class="options-container" *ngIf="selectorOpen">
     <div class="options-container-header">
-      {{deathsField.Period| LanguagesPipe}}
+      {{deathsFields.Period| LanguagesPipe}}
     </div>
     <div
       *ngFor="let option of rangeOptions"
@@ -26,8 +26,8 @@
 
     <!-- Buttons -->
     <div class="selector-actions">
-      <button (click)="cancelTempRange($event)">{{deathsField.Cancel | LanguagesPipe}}</button>
-      <button (click)="applyTempRange($event)"> {{deathsField.OK| LanguagesPipe}} </button>
+      <button (click)="cancelTempRange($event)">{{deathsFields.Cancel | LanguagesPipe}}</button>
+      <button (click)="applyTempRange($event)"> {{deathsFields.OK| LanguagesPipe}} </button>
     </div>
   </div>
 </div>

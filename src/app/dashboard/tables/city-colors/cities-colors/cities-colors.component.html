@@ -6,13 +6,23 @@
     </div>
     <app-more-menu></app-more-menu>
   </div>
-  <div>
-    {{ cityHealthColorsFields.LastUpdate | LanguagesPipe }} 
-  </div>
+  
   <app-city-filter 
     [cities]="cityData"
     (filterChanged)="onFilterChange($event)">
   </app-city-filter>
+  <div class="last-update">ⓘ
+    {{ cityHealthColorsFields.LastUpdate | LanguagesPipe }} 
+  </div>
+<div class="risk-legend">
+  <div class="risk-item" *ngFor="let color of colors">
+    <div class="risk-box" [ngClass]="'risk-' + color.cssClass"></div>
+    <div class="risk-explanation-box">
+      <span>{{ cityHealthColorsFields[color.fieldKey] | LanguagesPipe }}</span>
+      <span class="risk-explanation">{{ cityHealthColorsFields[color.explanationKey]| LanguagesPipe }}</span>
+    </div>
+  </div>
+</div>
   <div class="occupancy-table-wrapper">
     <table class="occupancy-table">
       <thead>
@@ -50,8 +60,8 @@
           <td>{{ city.positivityPercent.toFixed(1) }}</td>
           <td>{{ city.changeRate.toFixed(1) }}</td>
           <td>{{ city.currentSick }}</td>
-          <td>
-            <div [ngClass]="getRowColor(city.grade)">
+          <td class="grade-cell">
+            <div class="grade-color-box" [ngClass]="getRowColor(city.grade)">
               {{ city.grade.toFixed(1) }}
             </div>
           </td>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslationService } from 'src/app/core/services/translation.service';
-import { HeaderField } from 'src/assets/data/keys/header-data.keys';
+import { HeaderFields } from 'src/assets/data/keys/header-data.keys';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { HeaderField } from 'src/assets/data/keys/header-data.keys';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  HeaderField = HeaderField
+  HeaderFields = HeaderFields
   currentLang: 'he' | 'en' = 'he';
   isDarkMode = false;
   showLanguageMenu = false; // NEW

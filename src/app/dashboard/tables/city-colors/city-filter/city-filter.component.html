@@ -1,12 +1,12 @@
 <div class="filter-container">
   <div class="filter-header" (click)="toggleDropdown()">
-    <div *ngIf="currenLabel">
+    <span *ngIf="currenLabel">
       {{ currenLabel | LanguagesPipe }}
-    </div>
+    </span>
     <div *ngIf="!currenLabel">
       {{ cityHealthColorsFields.allCities| LanguagesPipe }}
     </div>
-      <span class="arrow" [class.open]="isOpen"></span>
+    <span class="arrow" [class.open]="isOpen">&#x203A;</span>
   </div>
 
   <div class="filter-dropdown" *ngIf="isOpen">
@@ -20,8 +20,7 @@
       </li>
     </ul>
 
-
-    <div class="filter-buttons">
+    <div class="selector-actions">
       <button (click)="applyFilter()">
       {{ cityHealthColorsFields.Save| LanguagesPipe }}
       </button>

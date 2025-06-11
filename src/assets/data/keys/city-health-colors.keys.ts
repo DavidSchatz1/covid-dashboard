@@ -117,5 +117,9 @@ export enum cityHealthColorsFields {
   ColorProgramInfo = "colorProgramInfo",
   Save = "save",
   Cancel = "cancel",
-  SearchForCity = "searchForCity"  
+  SearchForCity = "searchForCity",
+  RedExplanation = "redExplanation",
+  OrangeExplanation = "orangeExplanation",
+  YellowExplanation = "yellowExplanation",
+  GreenExplanation = "greenExplanation"
 }

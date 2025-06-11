@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 .range-selector {
   position: relative;
   width: 110px;
@@ -17,12 +18,9 @@
     font-size: $font-size-sm;
 
     .arrow {
-      transition: transform 0.2s;
+      @include arrow();
     }
 
-    .arrow.open {
-      transform: rotate(180deg);
-    }
   }
 
   .options-container {
@@ -78,5 +76,12 @@
         }
       }
     }
+  }
+}
+.selector-actions{
+  @include selector-actions();
+
+  button{
+    @include selector-actions-button();
   }
 }

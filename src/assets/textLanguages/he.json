@@ -313,6 +313,10 @@
       "colorProgramInfo": "הטבלה מציגה נתוני תחלואה לפי ערים בישראל, כולל מספר חולים פעילים, שיעור הבדיקות החיוביות ומדדים נוספים. ניתן למיין ולסנן את הערים בהתאם לצורך.",
       "save": "שמור",
       "cancel": "ביטול",
-      "searchForCity": "הקלד שם עיר..."
+      "searchForCity": "הקלד שם עיר...",
+      "redExplanation": "נמוך מ3",
+      "orangeExplanation": "בין 3 ל5",
+      "yellowExplanation": "בין 5 ל7",
+      "greenExplanation": "גובה מ7.5"
   }
 }

@@ -1,18 +1,17 @@
+@import "mixins";
+@import "variables";
 .dropdown-wrapper {
   margin-bottom: 10px;
   position: relative;
-  width: 300px;
-  font-family: Arial;
+  width: 270px;
 
   .dropdown-toggle {
-    background-color: #5ea5f9;
-    color: var(--text-color);
-    padding: 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    user-select: none;
-    font-size: 14px;
-    text-align: right;
+    @include dropdown-toggle();
+    width: fit-content;
+
+    .arrow {
+      @include arrow();
+    }
   }
 
   .dropdown-panel {
@@ -24,15 +23,22 @@
     width: 100%;
     max-height: 250px;
     overflow-y: auto;
-    padding: 10px;
-    z-index: 100;
+    padding-top: 10px;
+    z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-    .time-range-selector{
+    .time-range-selector {
       display: flex;
       flex-direction: column;
       gap: 5px;
 
+      label {
+        display: block;
+        margin-bottom: 4px;
+        padding: 0 8px;
+        cursor: pointer;
+        font-size: $font-size-sm;
+      }
     }
   }
 
@@ -48,27 +54,19 @@
     max-height: 150px;
     overflow-y: auto;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 
-    label {
-      display: block;
-      margin-bottom: 4px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    input[type='checkbox'] {
+    input[type="checkbox"] {
       margin-left: 8px;
     }
   }
 
   .dropdown-actions {
-    display: flex;
-    justify-content: space-between;
+    @include selector-actions();
 
     button {
-      padding: 4px 10px;
-      font-size: 13px;
-      cursor: pointer;
+      @include selector-actions-button();
     }
   }
 }

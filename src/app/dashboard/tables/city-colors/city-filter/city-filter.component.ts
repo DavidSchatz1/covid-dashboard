@@ -23,7 +23,6 @@ export class CityFilterComponent {
   );
 }
 
-
   toggleDropdown() {
     this.isOpen = !this.isOpen;
     this.searchTerm = '';

@@ -35,17 +35,3 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
 }
-
-.selector-actions {
-  margin-top: 8px;
-
-  button {
-    background-color: var(--more-hover-color);
-    width: 50%;
-    cursor: pointer;
-    height: 32px;
-    border: none;
-    font-size: $font-size-base;
-    font-family: $font-family-base;
-  }
-}

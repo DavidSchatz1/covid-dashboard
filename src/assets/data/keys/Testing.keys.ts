@@ -1,3 +1,3 @@
-export enum TestingField {
+export enum TestingFields {
   Title = 'TestingTitle'
 }

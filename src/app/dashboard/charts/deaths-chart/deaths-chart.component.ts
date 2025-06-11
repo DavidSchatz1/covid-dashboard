@@ -1,5 +1,4 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { TranslationService } from 'src/app/core/services/translation.service';
 
 @Component({
   selector: 'app-deaths-chart',
@@ -15,34 +14,31 @@ export class DeathsChartComponent implements OnChanges {
     daily: '', avg: '', date: '', deaths: ''
   };
 
-  
-
   chartOptions: any;
 
   ngOnChanges(): void {
     const textColor = getComputedStyle(document.body).getPropertyValue('--text-color').trim();
     const bgColor = getComputedStyle(document.body).getPropertyValue('--card-background').trim();
-    const direction = getComputedStyle(document.body).direction === 'rtl' ? 'right' : 'left';
+    const directionForChart = getComputedStyle(document.body).direction === 'rtl' ? 'right' : 'left';
 
     this.chartOptions = {
       backgroundColor: bgColor,
       textStyle: { fontFamily: 'Open Sans', color: textColor },
       tooltip: { trigger: 'axis' },
       legend: {
-        // שינוי כאן: הגדרת מערך אובייקטים עבור data
         data: [
           {
-            icon: 'circle', // הגדרת אייקון כעיגול
+            icon: 'circle',
             name: this.translations.daily,
           },
           {
             name: this.translations.avg,
-            icon: 'circle' // הגדרת אייקון כעיגול
+            icon: 'circle'
           }
         ],
         textStyle: { color: textColor },
         top: 'top',
-        left: direction,
+        left: directionForChart,
       },
       grid: { left: 70, right: 20, top: 60, bottom: 60 },
       xAxis: {
@@ -51,13 +47,13 @@ export class DeathsChartComponent implements OnChanges {
         boundaryGap: true,
         axisLine: { lineStyle: { color: textColor } },
         axisLabel: {
-          margin: 30, align: 'left', fontSize: 10, color: textColor
+          margin: 15, align: 'center', fontSize: 10, color: textColor
         },
         name: this.translations.date,
         nameLocation: 'middle',
         nameTextStyle: {
           color: textColor, fontSize: 14, fontWeight: 500,
-          fontFamily: 'Open Sans', align: 'center', padding: [30, 0, 0, 0]
+          fontFamily: 'Open Sans', align: 'center', padding: [20, 0, 0, 0]
         }
       },
       yAxis: {

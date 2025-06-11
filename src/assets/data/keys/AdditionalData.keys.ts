@@ -1,3 +1,3 @@
-export enum AdditionalDataField {
+export enum AdditionalDataFields {
   Title = 'AdditionalDataTitle'
 }
