@@ -1,74 +1,36 @@
-// @import 'variables';
-// .info {
-//   position: relative;
-//   display: inline-block;
-//   padding: 8px;
-
-//   .content {
-//     display: none;
-//     position: absolute;
-
-//     top: 100%;
-//     // inset-inline-start: 10px;
-//     background: var(--card-background);
-//     color: var(text-color);
-//     padding: 2px;
-//     border: 1px solid #ccc;
-//     border-radius: $border-radius;
-//     width: 200px;
-//     font-size: $font-size-xs;
-//     font-weight: 400;
-//     z-index: 10;
-//     max-width: 50vw;
-//     overflow-wrap: break-word;
-
-//     .content-text{
-//         p{
-//         margin: 0;
-//         padding: 0;
-//       }
-//     }
-    
-//   }
-
-//   &:hover .content {
-//     display: block;
-//   }
-// }
-
-@import 'variables';
+@import "variables";
 .info {
   position: relative;
   display: inline-block;
   padding: 8px;
 
   .content {
-    opacity: 0; // התחל כנסתר
-    pointer-events: none; // מונע אינטראקציה כשנסתר
-    transition: opacity 0.2s ease-in-out; // אנימציה עדינה להופעה והיעלמות
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
     position: absolute;
-    top: 100%; // מתחת לאייקון    
+    top: 100%;
     background: var(--card-background);
     inset-inline-start: -20px;
-    color: var(--text-color); // תיקנתי את זה ל-var(--text-color)
+    color: var(--text-color);
     padding: 2px;
-    border: 1px solid #ccc;
+    border: 1px solid $border-color;
     border-radius: $border-radius;
     width: 120px;
     max-width: 25vw;
     font-size: $font-size-xs;
     font-weight: 400;
     z-index: 10;
-    box-sizing: border-box; // וודא שהפדינג והבורדר נכללים ברוחב
+    box-sizing: border-box;
 
     &.show-tooltip {
       opacity: 1;
       pointer-events: auto;
     }
 
-    .content-text{
+    .content-text {
       padding: 0 5px;
-      p{
+      p {
         margin: 0;
         padding: 0;
       }

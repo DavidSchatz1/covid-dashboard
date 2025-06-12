@@ -1,9 +1,15 @@
-app-empty-card{
+@import "variables";
+app-empty-card {
   display: contents;
 }
 
-.chart-card{
+.chart-card {
   min-height: 200px;
   max-width: 600px;
   margin: 0;
+}
+p {
+  font-size: $font-size-xl;
+  font-weight: 700;
+  padding: 10px;
 }

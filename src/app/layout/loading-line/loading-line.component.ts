@@ -9,9 +9,8 @@ export class LoadingLineComponent implements OnInit {
   isActive = false;
 
   ngOnInit() {
-    // Start animation
     setTimeout(() => {
       this.isActive = true;
-    }, 1000); // Start immediately or with a delay
+    }, 1000);
   }
 }

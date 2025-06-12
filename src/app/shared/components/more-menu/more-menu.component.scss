@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 .menu-container {
   position: relative;
   display: inline-block;
@@ -8,7 +8,6 @@
   cursor: pointer;
   user-select: none;
   padding: 15px 10px 10px 10px;
-  
 }
 
 .menu {
@@ -17,7 +16,7 @@
   inset-inline-start: -110px;
   background: var(--card-background);
   color: var(text-color);
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
   border-radius: 6px;
   box-shadow: $box-shadow;
   width: 140px;
@@ -32,12 +31,11 @@
   gap: 0.5rem;
   font-size: 14px;
   font-weight: 400;
-  
 
   &:hover {
     background-color: var(--more-hover-color);
   }
-  .icon{
+  .icon {
     border: 1px solid rgb(176, 176, 176);
     border-radius: 50%;
     width: 16px;
@@ -46,4 +44,3 @@
     padding: 4px;
   }
 }
-

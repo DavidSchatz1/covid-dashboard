@@ -191,7 +191,9 @@
       "southAfrica": "דרום אפריקה",
       "save": "שמור",
       "cancel": "ביטול",
-      "period": "זמן"
+      "period": "זמן",
+      "SearchForCountry": "חפש מדינה..."
+
     
   },
   "cityTable": {
@@ -318,5 +320,8 @@
       "orangeExplanation": "בין 3 ל5",
       "yellowExplanation": "בין 5 ל7",
       "greenExplanation": "גובה מ7.5"
+  },
+  "chartPlaceholder":{
+    "chartPlaceholder":"אין נתונים להצגה"
   }
 }

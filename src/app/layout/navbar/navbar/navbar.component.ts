@@ -1,6 +1,6 @@
 import { Input, OnInit, ViewChild } from '@angular/core';
 import { AnchorFields } from 'src/assets/data/keys/navbar-data.keys';
-import { Component, HostListener, QueryList, ViewChildren, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, HostListener, ElementRef, AfterViewInit } from '@angular/core';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, HostListener, QueryList, ViewChildren, ElementRef, AfterView
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, AfterViewInit {
   AnchorFields = AnchorFields;
   @Input() sections: HTMLElement[] = [];
   activeSection: string = '';

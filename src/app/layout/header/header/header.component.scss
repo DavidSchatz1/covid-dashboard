@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'breakpoints';
+@import "variables";
+@import "breakpoints";
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -13,30 +13,30 @@
   background-color: var(--grey-background);
   color: var(--text-color);
 }
-.section1{
+.section1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
 
-  .logo-wrapper{
+  .logo-wrapper {
     display: inline-block;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
     height: 53px;
     z-index: 1;
     cursor: pointer;
-    border-left: 1px solid rgb(220, 220, 220) ;
+    border-left: 1px solid rgb(220, 220, 220);
   }
 
-  .main-title{
+  .main-title {
     margin: 0 10px;
 
     @include breakpoint(sm) {
       font-size: $font-size-lg;
     }
     @include breakpoint(xs) {
-      font-size: $font-size-base;
+      font-size: $font-size-sm;
     }
   }
 }
@@ -62,37 +62,34 @@
   }
 }
 
-.section2{
+.section2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: end;
 
-  .language-container{
-  padding: 1px 6px;
-  padding-top: 6px;
-}
-.language-menu {
-  position: absolute; // or relative to the header container
-  top: 10px; // adjust as needed
-  inset-inline-end: 87px;
-  background: white;
-  color: black;
-  border: 1px solid #ccc;
-  border-radius: $border-radius-lg;
-  padding: 4px 8px;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 100;
-  box-shadow: $box-shadow-lg;
-
-  span {
+  .language-container {
+    padding: 1px 6px;
+    padding-top: 6px;
+  }
+  .language-menu {
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 87px;
+    background: white;
+    color: black;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-lg;
+    padding: 4px 8px;
+    font-size: 16px;
     cursor: pointer;
-    padding: 0px 8px;
-    line-height: 1.75rem;
+    z-index: 100;
+    box-shadow: $box-shadow-lg;
+
+    span {
+      cursor: pointer;
+      padding: 0px 8px;
+      line-height: 1.75rem;
+    }
   }
 }
-}
-
-
-

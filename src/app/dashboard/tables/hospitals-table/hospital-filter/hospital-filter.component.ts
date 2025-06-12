@@ -1,6 +1,12 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TranslationService } from 'src/app/core/services/translation.service';
 import { hospitalTableFields } from 'src/assets/data/keys/hospitalTable.keys';
 
+interface FilterHospital {
+  name: string; 
+  hebrewName: string;
+  selected: boolean;
+}
 @Component({
   selector: 'app-hospital-filter',
   templateUrl: './hospital-filter.component.html',
@@ -11,22 +17,35 @@ export class HospitalFilterComponent implements OnInit {
   @Output() selectionChanged = new EventEmitter<string[]>();
   hospitalTableFields = hospitalTableFields
 
-  hospitalsForFilter: { name: string; selected: boolean }[] = [];
+  hospitalsForFilter: FilterHospital[] = [];
   selectedHospitals: string[] = [];
   searchTerm: string = '';
   isDropdownOpen: boolean = false;
 
-  ngOnInit(): void {
-    this.hospitalsForFilter = this.hospitalNames.map(name => ({
-      name,
-      selected: true
-    }));
-    this.selectedHospitals = [...this.hospitalNames];
+  constructor(private translationService: TranslationService) {}
+ ngOnInit(): void {
+  
+    this.selectedHospitals = this.hospitalNames.map(h => h);
+    console.log(this.hospitalNames);
   }
+  prepareTranslations() {
+    this.hospitalNames.forEach(hospital => {
+       this.translationService.getTranslation$(`HospitalTable.${hospital}`).subscribe(hebrewName => {
+        this.hospitalsForFilter.push({
+          name: hospital,
+          hebrewName,
+          selected: true
+        })
+      });
+    });
+  }
+  
 
-  get filteredHospitals() {
+  get filteredHospitals(): FilterHospital[] { 
+    const lowerCaseSearchTerm = this.searchTerm.toLowerCase();
     return this.hospitalsForFilter.filter(h =>
-      h.name.includes(this.searchTerm)
+      h.name.toLowerCase().includes(lowerCaseSearchTerm) ||
+      h.hebrewName.toLowerCase().includes(lowerCaseSearchTerm)
     );
   }
 
@@ -34,6 +53,9 @@ export class HospitalFilterComponent implements OnInit {
     this.isDropdownOpen = !this.isDropdownOpen;
     if (!this.isDropdownOpen) {
       this.searchTerm = '';
+    }
+    if (this.hospitalsForFilter.length === 0) {
+      this.prepareTranslations();
     }
   }
 
@@ -47,7 +69,7 @@ export class HospitalFilterComponent implements OnInit {
     this.searchTerm = '';
   }
 
-  cancelFilter() {
+   cancelFilter() {
     this.hospitalsForFilter.forEach(h => {
       h.selected = this.selectedHospitals.includes(h.name);
     });

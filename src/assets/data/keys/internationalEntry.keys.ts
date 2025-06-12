@@ -39,5 +39,6 @@ export enum InternationalEntryFields {
   southAfrica = 'southAfrica',
   Save = 'save',
   Cancel = 'cancel',
-  Period = 'period'
+  Period = 'period',
+  SearchForCountry = "SearchForCountry"
 }

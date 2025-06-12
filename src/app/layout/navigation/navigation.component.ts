@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { navigatioFields } from 'src/assets/data/keys/navigation-data.keys';
 
 @Component({
@@ -6,11 +6,6 @@ import { navigatioFields } from 'src/assets/data/keys/navigation-data.keys';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
   navigationFields = navigatioFields
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

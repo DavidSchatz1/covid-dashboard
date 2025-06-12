@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslationService } from 'src/app/core/services/translation.service';
 import { HeaderFields } from 'src/assets/data/keys/header-data.keys';
 
@@ -7,19 +7,16 @@ import { HeaderFields } from 'src/assets/data/keys/header-data.keys';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   HeaderFields = HeaderFields
   currentLang: 'he' | 'en' = 'he';
   isDarkMode = false;
-  showLanguageMenu = false; // NEW
+  showLanguageMenu = false;
 
   constructor(private translationService: TranslationService) {
     this.translationService.currentLang$.subscribe(lang => {
       this.currentLang = lang as 'he' | 'en';
     });
-  }
-
-  ngOnInit(): void {
   }
 
   toggleLanguageMenu(): void {
@@ -30,7 +27,7 @@ export class HeaderComponent implements OnInit {
     if (lang !== this.currentLang) {
       this.translationService.switchLanguage(lang);
     }
-    this.showLanguageMenu = false; // Close the menu
+    this.showLanguageMenu = false;
   }
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;

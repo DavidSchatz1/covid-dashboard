@@ -10,13 +10,18 @@
   </div>
 
   <div class="filter-dropdown" *ngIf="isOpen">
-    <input type="text" [(ngModel)]="searchTerm" placeholder="{{ cityHealthColorsFields.SearchForCity| LanguagesPipe }}" />
+    <input 
+      class="search-box"
+      type="text" 
+      [(ngModel)]="searchTerm" 
+      placeholder="{{ cityHealthColorsFields.SearchForCity| LanguagesPipe }}" 
+      />
 
     <ul class="city-list">
       <li *ngFor="let city of filteredCities" 
-          (click)="selectCity(city.name)"
-          [class.selected]="city.name === selectedCity">
-        {{ city.name | LanguagesPipe }}
+          (click)="selectCity(city)"
+          [class.selected]="city.englishName === selectedCity">
+        {{ city.englishName | LanguagesPipe }}
       </li>
     </ul>
 

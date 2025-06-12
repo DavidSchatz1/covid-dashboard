@@ -186,7 +186,8 @@
     "southAfrica": "South Africa",
     "save": "Save",
     "cancel": "Cancel",
-    "period": "זמן"
+    "period": "Period",
+    "SearchForCountry": "Search for Country..."
 
   },
   "cityTable": {
@@ -313,5 +314,8 @@
     "orangeExplanation": "between 3 and 5",
     "yellowExplanation": "between 5 and 7",
     "greenExplanation": "higher than 7.5"
+  },
+  "chartPlaceholder":{
+    "chartPlaceholder":"Chart Placeholder"
   }
 }

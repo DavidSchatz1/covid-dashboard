@@ -1,7 +1,7 @@
-html{
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -14,8 +14,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 .main-title {
@@ -27,11 +26,9 @@ body {
   font-size: $font-size-lg;
   font-weight: 700;
 }
-.chart-card{
+.chart-card {
   padding: 10px;
   border-radius: 10px;
-  // margin: 10px;
   background-color: var(--card-background);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
 }

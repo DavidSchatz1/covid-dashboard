@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'breakpoints';
+@import "variables";
+@import "breakpoints";
 
 .sidenav {
   display: flex;
@@ -32,7 +32,7 @@
     width: 30px;
     border: none;
     box-shadow: $box-shadow-lg;
-    border: 1px solid #b8b8b8;
+    border: 1px solid $border-color;
     border-radius: 50%;
     font-size: 1.75rem;
     cursor: pointer;
@@ -40,7 +40,7 @@
     justify-content: center;
     align-items: center;
 
-    span{
+    span {
       padding: 0 0 5px 0;
       margin: 0;
     }
@@ -55,7 +55,7 @@
       justify-content: space-between;
       cursor: pointer;
       padding: 10px;
-    padding-inline-end: 17px;
+      padding-inline-end: 17px;
       .icon {
         margin-left: 10px;
       }
@@ -68,7 +68,6 @@
       .chevron {
         font-size: 1rem;
         padding: 0 10px;
-
       }
     }
 
@@ -83,7 +82,7 @@
 
     hr {
       border: none;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid $border-color;
       margin: 15px 0;
     }
 

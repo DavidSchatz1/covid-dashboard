@@ -4,7 +4,7 @@ import { cityHealthColorsFields } from 'src/assets/data/keys/city-health-colors.
 import { TranslationService } from 'src/app/core/services/translation.service';
 
 interface CityHealthData {
-  name: string; // באנגלית
+  name: string;
   newCasesPer10k: number;
   positivityPercent: number;
   changeRate: number;
@@ -20,6 +20,10 @@ interface ColorItem {
     fieldKey: 'Red' | 'Orange' | 'Yellow' | 'Green';
     explanationKey: 'RedExplanation' | 'OrangeExplanation' | 'YellowExplanation' | 'GreenExplanation';
   }
+interface FilterCityData {
+  englishName: string;
+  hebrewName: string;
+}
 
 @Component({
   selector: 'app-cities-colors',
@@ -30,6 +34,8 @@ export class CitiesColorsComponent implements OnInit {
   cityData: CityHealthData[] = [];
   displayedData: CityHealthData[] = [];
   cityHealthColorsFields = cityHealthColorsFields;
+  filterCitiesData: FilterCityData[] = [];
+
 
   currentSortField: SortField | null = null;
   currentSortDirection: SortDirection = null;
@@ -50,10 +56,18 @@ export class CitiesColorsComponent implements OnInit {
   this.http.get<CityHealthData[]>('assets/data/israeli_city_health_data.json')
     .subscribe(data => {
       this.cityData = data;
+      this.prepareFilterData();
+
       this.updateDisplayedData();
     });
   }
 
+  private prepareFilterData(): void {
+    this.filterCitiesData = this.cityData.map(city => ({
+      englishName: city.name,
+      hebrewName: this.translationService.getTranslation(`cityTable.${city.name}`) || city.name
+    }));
+  }
   onFilterChange(filteredCities: string[]): void {
     if (filteredCities.length === 0) {
       this.displayedData = this.cityData;
@@ -62,10 +76,6 @@ export class CitiesColorsComponent implements OnInit {
       this.displayedData = this.cityData.filter(city => filteredCities.includes(city.name));
     }
   }
-//כנראה לא עושה כלום! למחיקה, אחרי שנראה שתיבת החיפוש חזרה לעבוד
-  // getCityLabel(city: string): string {
-  //   return cityHealthColorsFields[city as keyof typeof cityHealthColorsFields] || city;
-  // }
 
   getRowColor(grade: number): string {
     if (grade >= 7.5) return 'green-bg';
@@ -94,7 +104,6 @@ export class CitiesColorsComponent implements OnInit {
   }
 
   private updateDisplayedData(): void {
-  // נתרגם מחדש כל עיר לפי השפה הנוכחית
   const translated = this.cityData.map(city => ({
     ...city,
     translatedName: this.translationService.getTranslation(`cityTable.${city.name}`)

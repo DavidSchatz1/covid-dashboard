@@ -3,7 +3,7 @@
 .dropdown-wrapper {
   margin-bottom: 10px;
   position: relative;
-  width: 270px;
+  width: fit-content;
 
   .dropdown-toggle {
     @include dropdown-toggle();
@@ -17,17 +17,17 @@
   .dropdown-panel {
     position: absolute;
     top: 100%;
-    right: 0;
+    inset-inline-start: 0;
     background: var(--card-background);
-    border: 1px solid #ccc;
-    width: 100%;
+    border: 1px solid $border-color;
+    width: max(150px, 70%);
     max-height: 250px;
     overflow-y: auto;
-    padding-top: 10px;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow-lg;
 
     .time-range-selector {
+      padding-top: 10px;
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -56,9 +56,14 @@
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+    font-size: $font-size-sm;
 
+    label {
+      margin-bottom: 4px;
+    }
     input[type="checkbox"] {
       margin-left: 8px;
+      accent-color: var(--text-color);
     }
   }
 

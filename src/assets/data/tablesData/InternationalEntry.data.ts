@@ -1,35 +1,3 @@
-// export interface InternationalEntryData {
-//   country: string;
-//   incoming: number;
-//   verifiedCitizens: number;
-//   verifiedForeigners: number;
-//   percentageVerified: number;
-//   riskColor: string;
-// }
-
-// export const internationalEntries: InternationalEntryData[] = [
-//   { country: 'unitedStates', incoming: 12000, verifiedCitizens: 200, verifiedForeigners: 100, percentageVerified: 2.5, riskColor: 'yellow' },
-//   { country: 'unitedKingdom', incoming: 8000, verifiedCitizens: 80, verifiedForeigners: 40, percentageVerified: 1.5, riskColor: 'yellow' },
-//   { country: 'france', incoming: 7500, verifiedCitizens: 60, verifiedForeigners: 30, percentageVerified: 1.2, riskColor: 'yellow' },
-//   { country: 'germany', incoming: 10000, verifiedCitizens: 90, verifiedForeigners: 10, percentageVerified: 1.0, riskColor: 'yellow' },
-//   { country: 'italy', incoming: 6500, verifiedCitizens: 50, verifiedForeigners: 20, percentageVerified: 1.08, riskColor: 'yellow' },
-//   { country: 'spain', incoming: 7200, verifiedCitizens: 100, verifiedForeigners: 60, percentageVerified: 2.22, riskColor: 'yellow' },
-//   { country: 'canada', incoming: 5000, verifiedCitizens: 25, verifiedForeigners: 10, percentageVerified: 0.7, riskColor: 'green' },
-//   { country: 'russia', incoming: 6000, verifiedCitizens: 180, verifiedForeigners: 60, percentageVerified: 4.0, riskColor: 'red' },
-//   { country: 'china', incoming: 11000, verifiedCitizens: 70, verifiedForeigners: 10, percentageVerified: 0.73, riskColor: 'green' },
-//   { country: 'japan', incoming: 4800, verifiedCitizens: 30, verifiedForeigners: 20, percentageVerified: 1.04, riskColor: 'yellow' },
-//   { country: 'southKorea', incoming: 4500, verifiedCitizens: 25, verifiedForeigners: 10, percentageVerified: 0.78, riskColor: 'green' },
-//   { country: 'australia', incoming: 5200, verifiedCitizens: 20, verifiedForeigners: 5, percentageVerified: 0.48, riskColor: 'green' },
-//   { country: 'brazil', incoming: 9000, verifiedCitizens: 200, verifiedForeigners: 150, percentageVerified: 3.89, riskColor: 'red' },
-//   { country: 'india', incoming: 11000, verifiedCitizens: 250, verifiedForeigners: 120, percentageVerified: 3.36, riskColor: 'red' },
-//   { country: 'ukraine', incoming: 4300, verifiedCitizens: 60, verifiedForeigners: 30, percentageVerified: 2.09, riskColor: 'yellow' },
-//   { country: 'turkey', incoming: 5600, verifiedCitizens: 80, verifiedForeigners: 40, percentageVerified: 2.14, riskColor: 'yellow' },
-//   { country: 'egypt', incoming: 3700, verifiedCitizens: 50, verifiedForeigners: 20, percentageVerified: 1.89, riskColor: 'yellow' },
-//   { country: 'argentina', incoming: 3100, verifiedCitizens: 25, verifiedForeigners: 15, percentageVerified: 1.29, riskColor: 'yellow' },
-//   { country: 'southAfrica', incoming: 2900, verifiedCitizens: 35, verifiedForeigners: 25, percentageVerified: 2.07, riskColor: 'yellow' },
-// ];
-
-// InternationalEntry.data.ts
 import { timeRange } from "src/app/dashboard/tables/entry-table/international-entry/entry-filter/entry-filter.component";
 
 export interface InternationalEntryData {

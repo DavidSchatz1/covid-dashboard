@@ -2,7 +2,7 @@
   background-color: var(--grey-background);
   color: var(--text-color);
   border-radius: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid $border-color;
   cursor: pointer;
   user-select: none;
   font-size: 14px;

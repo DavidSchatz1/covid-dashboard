@@ -1,11 +1,10 @@
-@import 'variables';
-@import 'breakpoints';
+@import "variables";
+@import "breakpoints";
 
 app-subject-links {
   display: contents;
 }
 .subject-links-title {
-  
   cursor: pointer;
   display: inline-block;
   font-size: $font-size-base;
@@ -16,15 +15,15 @@ app-subject-links {
   margin-bottom: 20px;
 
   &.open {
-    font-weight: 700; 
+    font-weight: 700;
   }
-  span{
+  span {
     display: inline;
   }
   .separator {
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-    color: gray;
+    color: $border-color;
   }
 }
 
@@ -35,8 +34,8 @@ app-subject-links {
   width: 400px;
   height: 200px;
   z-index: 10;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   box-shadow: $box-shadow-lg;
   border-radius: 6px;
   background-color: var(--background-color);
@@ -65,12 +64,10 @@ app-subject-links {
       }
     }
 
-    .text-area{
+    .text-area {
       display: flex;
       flex-direction: column;
       padding-inline-start: 10px;
-      
-      
 
       .line {
         padding: 0;
@@ -78,10 +75,8 @@ app-subject-links {
         font-size: $font-size-xs;
         font-weight: 400;
         color: var(--text-color);
-
-        
       }
-      a{
+      a {
         padding: 0;
         margin: 0;
         font-size: $font-size-xs;
@@ -89,6 +84,6 @@ app-subject-links {
         color: blue;
         text-decoration: underline;
       }
-    } 
+    }
   }
 }

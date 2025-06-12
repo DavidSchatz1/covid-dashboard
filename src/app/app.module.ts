@@ -24,7 +24,7 @@ import { VaccinationSectionComponent } from './dashboard/sections/vaccination-se
 import { NgxEchartsModule } from 'ngx-echarts';
 import { InfoIconComponent } from './shared/components/info-icon/info-icon.component';
 import { MoreMenuComponent } from './shared/components/more-menu/more-menu.component';
-import { RangeSelectorComponent } from './shared/components/range-selector/range-selector.component';
+import { RangeSelectorComponent } from './dashboard/charts/deaths-chart/range-selector/range-selector.component';
 import { DeathsChartComponent } from './dashboard/charts/deaths-chart/deaths-chart.component';
 import { LoadingLineComponent } from './layout/loading-line/loading-line.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

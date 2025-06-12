@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'variables';
+@import "mixins";
+@import "variables";
 .dropdown-wrapper {
   margin-bottom: 10px;
   position: relative;
@@ -7,7 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 
   .dropdown-toggle {
     @include dropdown-toggle();
@@ -21,21 +20,21 @@
     top: 100%;
     inset-inline-start: 0;
     background: var(--background-color);
-    border: 1px solid #ccc;
+    border: 1px solid $border-color;
     border-radius: 5px;
     width: 100%;
     max-height: 250px;
     overflow-y: auto;
     margin-top: 10px;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow;
   }
 
   .search-box {
     width: 100%;
     margin-bottom: 10px;
     padding: 5px;
-    font-size: 14px;
+    font-size: $font-size-sm;
     box-sizing: border-box;
   }
 
@@ -48,20 +47,19 @@
       display: block;
       margin-bottom: 4px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: $font-size-sm;
     }
 
-    input[type='checkbox'] {
+    input[type="checkbox"] {
       margin-left: 8px;
       accent-color: var(--text-color);
     }
-    
   }
 }
-.selector-actions{
+.selector-actions {
   @include selector-actions();
 
-  button{
+  button {
     @include selector-actions-button();
   }
 }

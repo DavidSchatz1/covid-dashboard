@@ -11,9 +11,6 @@ export class InfoIconComponent {
 
   isTooltipVisible: boolean = false;
 
-  constructor() {}
-
-
   showTooltip(): void {
     this.isTooltipVisible = true;
     setTimeout(() => {

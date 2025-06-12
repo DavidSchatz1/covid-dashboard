@@ -11,15 +11,16 @@
 .line {
   height: 100%;
   width: 0%;
-  background: linear-gradient(to right,
-    #00bfa5,  /* turquoise */
-    #33ccff,  /* light blue */
-    #00d4b4,  /* turquoise */
-    #00cc66,  /* green */
-    #99ff00   /* yellowish-green */
+  background: linear-gradient(
+    to right,
+    #00bfa5,
+    #33ccff,
+    #00d4b4,
+    #00cc66,
+    #99ff00
   );
-  
-transition: width 4s ease-out;
+
+  transition: width 4s ease-out;
 }
 
 .line.active {

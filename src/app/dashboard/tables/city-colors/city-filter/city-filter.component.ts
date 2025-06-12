@@ -1,13 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { cityHealthColorsFields } from 'src/assets/data/keys/city-health-colors.keys';
 
+
+interface FilterCity {
+  englishName: string;
+  hebrewName: string; 
+}
 @Component({
   selector: 'app-city-filter',
   templateUrl: './city-filter.component.html',
   styleUrls: ['./city-filter.component.scss']
 })
 export class CityFilterComponent {
-  @Input() cities: { name: string }[] = [];
+  @Input() cities: FilterCity[] = [];
   @Output() filterChanged = new EventEmitter<string[]>();
   cityHealthColorsFields = cityHealthColorsFields;
   currenLabel: string | null = null;
@@ -17,19 +22,20 @@ export class CityFilterComponent {
   searchTerm = '';
   selectedCity: string | null = null;
 
-  get filteredCities() {
-  return this.cities.filter(city =>
-    city.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-  );
-}
+  get filteredCities(): FilterCity[] {
+    return this.cities.filter(city =>
+      city.englishName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      city.hebrewName.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
 
   toggleDropdown() {
     this.isOpen = !this.isOpen;
     this.searchTerm = '';
   }
 
-  selectCity(city: string) {
-    this.selectedCity = city;
+  selectCity(city: FilterCity) {
+    this.selectedCity = city.englishName;
   }
 
   applyFilter() {
@@ -37,7 +43,9 @@ export class CityFilterComponent {
       this.filterChanged.emit([this.selectedCity]);
     }
     this.closeDropdown();
-    this.currenLabel = this.selectedCity;
+    if (!this.currenLabel && this.selectedCity) {
+       this.currenLabel = this.selectedCity; 
+    }
   }
 
   cancelFilter() {

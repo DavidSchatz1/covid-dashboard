@@ -1,9 +1,9 @@
-@import 'mixins';
-@import 'variables';
+@import "mixins";
+@import "variables";
 
 .filter-container {
   position: relative;
-  width: 200px;
+  width: 150px;
 }
 
 .filter-header {
@@ -12,7 +12,7 @@
   width: fit-content;
 }
 
-.arrow{
+.arrow {
   @include arrow();
   margin: 0 5px;
 }
@@ -23,17 +23,24 @@
   left: 0;
   background-color: var(--background-color);
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
   z-index: 10;
-  padding-top: 8px;
   box-shadow: $box-shadow-lg;
+
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
 }
 
-input{
+input {
   width: 193px;
   border: none;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
 }
 
 .city-list {
@@ -54,16 +61,13 @@ input{
       background-color: var(--more-hover-color);
       font-weight: bold;
     }
-
-    
   }
 }
 
-.selector-actions{
+.selector-actions {
   @include selector-actions();
 
-  button{
+  button {
     @include selector-actions-button();
   }
 }
-

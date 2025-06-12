@@ -6,6 +6,11 @@ import { TranslationService } from 'src/app/core/services/translation.service';
 type SortField = keyof HospitalData;
 type SortDirection = 'asc' | 'desc' | null;
 
+interface FilterHospitalData {
+  name: string;      
+  hebrewName: string;
+}
+
 @Component({
   selector: 'app-hospital-occupancy-table',
   templateUrl: './hospital-occupancy-table.component.html',
@@ -15,8 +20,9 @@ export class HospitalOccupancyTableComponent implements OnInit {
   allHospitals: HospitalData[] = hospitalBedOccupancyData;
   visibleHospitals: HospitalData[] = [];
   hospitalTableFields = hospitalTableFields;
+  hospitalsForFilterComponent: FilterHospitalData[] = [];
 
-  allHospitalNames: string[] = [];
+  allHospitalNames: string [] = [];
   selectedHospitalNames: string[] = [];
 
   currentSortField: SortField | null = null;
@@ -25,7 +31,7 @@ export class HospitalOccupancyTableComponent implements OnInit {
   constructor(private translationService: TranslationService) { }
 
   ngOnInit(): void {
-    this.allHospitalNames = this.allHospitals.map(h => h.nameKey);
+    this.allHospitalNames = this.allHospitals.map(h => h.nameKey); 
     this.selectedHospitalNames = [...this.allHospitalNames];
     this.updateVisibleHospitals();
   }
@@ -46,14 +52,11 @@ export class HospitalOccupancyTableComponent implements OnInit {
     this.updateVisibleHospitals();
   }
 
-
-
   private updateVisibleHospitals(): void {
   const filtered = this.allHospitals.filter(h =>
     this.selectedHospitalNames.includes(h.nameKey)
   );
 
-  // הוספת שדה מתורגם לכל בית חולים
   const translated = filtered.map(hospital => ({
     ...hospital,
     translatedName: this.translationService.getTranslation(`HospitalTable.${hospital.nameKey}`)
@@ -72,7 +75,6 @@ export class HospitalOccupancyTableComponent implements OnInit {
     let aVal = a[this.currentSortField!];
     let bVal = b[this.currentSortField!];
 
-    // אם ממיינים לפי nameKey, נמיר ל־translatedName
     if (this.currentSortField === 'nameKey') {
       aVal = a.translatedName || '';
       bVal = b.translatedName || '';

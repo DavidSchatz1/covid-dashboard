@@ -43,7 +43,7 @@
     <div *ngIf="!isTimeRangeStep" class="country-selector">
       <input
         type="text"
-        [placeholder]="'hospitalTableFields.SearchForHospital' | LanguagesPipe"
+        [placeholder]="InternationalEntryFields.SearchForCountry | LanguagesPipe"
         [(ngModel)]="searchTerm"
         class="search-box"
       />
